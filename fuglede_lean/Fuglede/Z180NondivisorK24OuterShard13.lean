@@ -1,0 +1,6 @@
+-- Import-only compatibility wrapper produced by fuglede_search/z180_nondivisor_k24_outer_shard13_split.py
+-- Splitter SHA-256: 2661eb67d3cd5d46d5a37d02d2c654349b6ab606e4e52f38a473246bb5d433d1
+-- Parent shard SHA-256: 38806224e57c5f0b2ee979d269cb88b410243d420e06384fda4843f5a4d9e413
+-- Public API preserved: z180NondivisorK24Leaf425 through z180NondivisorK24Leaf456.
+import Fuglede.Z180NondivisorK24OuterShard13A
+import Fuglede.Z180NondivisorK24OuterShard13B

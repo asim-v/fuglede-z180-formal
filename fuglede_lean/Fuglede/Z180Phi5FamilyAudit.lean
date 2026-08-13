@@ -1,0 +1,7 @@
+import Fuglede.Z180Phi5K10TypedAdapter
+import Fuglede.Z180Phi5K15TypedAdapter
+import Fuglede.Z180Phi5K30TypedAdapter
+
+#print axioms Fuglede.z180_phi5_k10_both_cyclotomic_zero
+#print axioms Fuglede.z180_phi5_k15_both_cyclotomic_zero
+#print axioms Fuglede.z180_phi5_k30_both_cyclotomic_zero

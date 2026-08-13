@@ -1,0 +1,14 @@
+import Fuglede.LabaMarshallCyclotomic
+
+/-! Kernel-dependency audit for the specialized cyclotomic/cuboid bridge. -/
+
+#print axioms Fuglede.sum_exactCRTFrequencies_cuboid
+#print axioms Fuglede.sum_exactCRTFrequencies_cuboid_mul_fourierSum
+#print axioms Fuglede.signedFinsetEvaluation_crtCuboidSign_eq_zero_of_cyclotomic
+#print axioms Fuglede.signedLevelEvaluation_crtCuboid_eq_of_cyclotomic
+#print axioms Fuglede.labaMarshall_2310_cuboid_of_cyclotomic_parents
+#print axioms Fuglede.sum_exactCRTFrequencies_pairing_mul_signedCuboid
+#print axioms Fuglede.exists_nonzero_crtCuboid_of_not_cyclotomic
+#print axioms Fuglede.labaMarshall_2310_cyclotomic
+#print axioms Fuglede.supportEnergy_eq_zero_iff_cyclotomicSupport_labaMarshall
+#print axioms Fuglede.supportEnergy_base_eq_zero_of_labaMarshall

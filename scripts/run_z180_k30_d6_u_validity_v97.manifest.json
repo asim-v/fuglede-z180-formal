@@ -1,0 +1,65 @@
+{
+  "schema": "z180-k30-d6-u-validity-v97-runner-policy-v1",
+  "runner": "scripts/run_z180_k30_d6_u_validity_v97.ps1",
+  "runnerSha256": "7016b6bcbf3c37d2d4b459e3bececa4a4c37ef8ffb2ae27b66382e0426833485",
+  "phaseRunner": "scripts/run_z180_k30_projective_cap20_pilot_v89.ps1",
+  "phaseRunnerSha256": "c0cd9fc0be5f9234355000a74c6e331219f74e1994c502bbd08b25797633d59f",
+  "generator": "fuglede_lean/scripts/generate_z180_k30_d6_u_validity_v97.py",
+  "generatorSha256": "03efd3842f746b000b550ef7fb0cf8722660a6fd0ea332ed4a6494266424a94b",
+  "validityManifest": "fuglede_lean/generated/z180_k30_d6_u_validity_v97.manifest.json",
+  "authoredManifestSha256": "a3067768be1032f81c3cde55dc233f6e7dd210f0168f6369b55cf1b9c9523a57",
+  "integratedManifestSha256": "d4959f272f5dd7b23487f26d8c1decf257cea78b4e06557935ab8fd8759e96cc",
+  "canonicalData": "fuglede_lean/Fuglede/Z180K30ExceptionalProjectiveProfileDataV97D6.lean",
+  "legacyDataSha256": "78e3372ff7b722e64963c45d02e5ae023188ad14b75630ae7b4bcd3afda1f115",
+  "integratedDataSha256": "17d5a88f59df0eeae64b157ae83c1abcc835847806002bf77f05df9c21432ceb",
+  "memoryCapBytes": 3489660928,
+  "moduleCount": 131,
+  "buildCount": 131,
+  "checkerCount": 12,
+  "compilePolicy": [
+    {
+      "stage": 1,
+      "kind": "core",
+      "count": 1,
+      "phase": "build+checker"
+    },
+    {
+      "stage": 2,
+      "kind": "profile_aligned_max20_leaves",
+      "count": 119,
+      "phase": "build-only"
+    },
+    {
+      "stage": 3,
+      "kind": "ten_class_structural_aggregates",
+      "count": 10,
+      "phase": "build+checker"
+    },
+    {
+      "stage": 4,
+      "kind": "exact_outer_validity_aggregate",
+      "count": 1,
+      "phase": "build+checker"
+    }
+  ],
+  "integration": {
+    "mutationCount": 6,
+    "dataMutation": "remove exactly the legacy monolithic U-validity theorem block and replace exactly two legacy completeness imports plus two endpoint theorem references with sealed algebraic endpoints",
+    "manifestMutation": "replace exactly the canonical DataD6 input SHA256 pin",
+    "divisorMutation": false,
+    "transactionalRollback": true,
+    "generatorCheckBeforeLean": true
+  },
+  "stateAuthentication": {
+    "manifestSha256": true,
+    "generatorSha256": true,
+    "phaseRunnerSha256": true,
+    "driverSha256": true,
+    "dataSha256": true,
+    "sourceSha256PerModule": true,
+    "oleanSha256PerModule": true,
+    "telemetrySha256PerPhase": true,
+    "memoryCapBytes": true
+  },
+  "leanWasRunDuringMaterialization": false
+}

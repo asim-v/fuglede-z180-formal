@@ -1,0 +1,17 @@
+import Fuglede.Z180FiveLevelFourier
+
+#print axioms Fuglede.eq_of_dft_eq_zero_off_zero
+#print axioms Fuglede.fromCRT180_fifthSingle
+#print axioms Fuglede.stdAddChar_fromCRT180_fifthSingle
+#print axioms Fuglede.frequencyOrder_fromCRT180_add_fifth
+#print axioms Fuglede.z180StandardCRTFourierSum_add_fifth_eq_dft
+#print axioms Fuglede.sum_z180FiveLevelFourierSum_eq
+#print axioms Fuglede.z180FiveLevelFourierSum_eq_of_vanishing_extensions
+#print axioms Fuglede.z180FiveLevelFourierSum_eq_of_cyclotomicZero_extensions
+#print axioms Fuglede.z180FiveLevelFourierSum_eq_of_cyclotomic_mul_five
+#print axioms Fuglede.z180FiveLevelFourierSum_eq_of_cyclotomic_five_mul_order
+#print axioms Fuglede.z180FiveLevelFourierSum_ne_zero_of_cyclotomic_defect
+#print axioms Fuglede.z180FiveLevelsNonempty_of_cyclotomic_defect
+#print axioms Fuglede.z180_phi30_defect_fiveLevelSums_eq
+#print axioms Fuglede.z180_phi30_defect_fiveLevelSums_ne_zero
+#print axioms Fuglede.z180_phi30_defect_fiveLevels_nonempty

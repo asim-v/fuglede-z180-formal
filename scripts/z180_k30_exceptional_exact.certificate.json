@@ -1,0 +1,311 @@
+{
+  "schema": "z180-k30-exceptional-exact/v1",
+  "arithmetic": {
+    "conductor": 36,
+    "cyclotomicPolynomial": "x^12-x^6+1",
+    "basis": "1,x,...,x^11",
+    "floatingPointUsed": false
+  },
+  "projectiveReduction": {
+    "coverage": "After possibly swapping U,V, V is in one coset mod d and U is in at most two classes mod 36/d, for d in {3,4,6}.",
+    "byDivisor": [
+      {
+        "divisor": 3,
+        "vChoices": 924,
+        "classPairs": 66,
+        "uChoicesPerPair": 1,
+        "enumerated": 60984,
+        "accepted": 504
+      },
+      {
+        "divisor": 4,
+        "vChoices": 84,
+        "classPairs": 36,
+        "uChoicesPerPair": 28,
+        "enumerated": 84672,
+        "accepted": 0
+      },
+      {
+        "divisor": 6,
+        "vChoices": 1,
+        "classPairs": 15,
+        "uChoicesPerPair": 924,
+        "enumerated": 13860,
+        "accepted": 1080
+      }
+    ],
+    "enumeratedCandidatePairs": 159516,
+    "acceptedExceptionalPairs": 1584,
+    "traceGramSquareTarget": 936,
+    "exceptionalSquaredSingularValues": [
+      30,
+      6
+    ]
+  },
+  "affineSetOrbitCount": 8,
+  "affineSetOrbitRepresentatives": [
+    [
+      0,
+      1,
+      12,
+      18,
+      24,
+      30
+    ],
+    [
+      0,
+      10,
+      12,
+      18,
+      24,
+      30
+    ],
+    [
+      0,
+      10,
+      12,
+      22,
+      24,
+      34
+    ],
+    [
+      0,
+      12,
+      15,
+      18,
+      24,
+      30
+    ],
+    [
+      0,
+      12,
+      15,
+      18,
+      30,
+      33
+    ],
+    [
+      0,
+      12,
+      16,
+      18,
+      24,
+      30
+    ],
+    [
+      0,
+      12,
+      18,
+      21,
+      24,
+      30
+    ],
+    [
+      0,
+      6,
+      12,
+      18,
+      24,
+      30
+    ]
+  ],
+  "gramStarAudit": [
+    {
+      "V": [
+        0,
+        1,
+        12,
+        18,
+        24,
+        30
+      ],
+      "exceptionalUCount": 6,
+      "uniqueGramCount": 6,
+      "pairQueries": 21,
+      "uniquePairSums": 21,
+      "tripleQueries": 56,
+      "witness": null
+    },
+    {
+      "V": [
+        0,
+        10,
+        12,
+        18,
+        24,
+        30
+      ],
+      "exceptionalUCount": 6,
+      "uniqueGramCount": 6,
+      "pairQueries": 21,
+      "uniquePairSums": 21,
+      "tripleQueries": 56,
+      "witness": null
+    },
+    {
+      "V": [
+        0,
+        10,
+        12,
+        22,
+        24,
+        34
+      ],
+      "exceptionalUCount": 18,
+      "uniqueGramCount": 18,
+      "pairQueries": 171,
+      "uniquePairSums": 165,
+      "tripleQueries": 1140,
+      "witness": null
+    },
+    {
+      "V": [
+        0,
+        12,
+        15,
+        18,
+        24,
+        30
+      ],
+      "exceptionalUCount": 6,
+      "uniqueGramCount": 6,
+      "pairQueries": 21,
+      "uniquePairSums": 21,
+      "tripleQueries": 56,
+      "witness": null
+    },
+    {
+      "V": [
+        0,
+        12,
+        15,
+        18,
+        30,
+        33
+      ],
+      "exceptionalUCount": 12,
+      "uniqueGramCount": 12,
+      "pairQueries": 78,
+      "uniquePairSums": 78,
+      "tripleQueries": 364,
+      "witness": null
+    },
+    {
+      "V": [
+        0,
+        12,
+        16,
+        18,
+        24,
+        30
+      ],
+      "exceptionalUCount": 6,
+      "uniqueGramCount": 6,
+      "pairQueries": 21,
+      "uniquePairSums": 21,
+      "tripleQueries": 56,
+      "witness": null
+    },
+    {
+      "V": [
+        0,
+        12,
+        18,
+        21,
+        24,
+        30
+      ],
+      "exceptionalUCount": 6,
+      "uniqueGramCount": 6,
+      "pairQueries": 21,
+      "uniquePairSums": 21,
+      "tripleQueries": 56,
+      "witness": null
+    },
+    {
+      "V": [
+        0,
+        6,
+        12,
+        18,
+        24,
+        30
+      ],
+      "exceptionalUCount": 1080,
+      "uniqueGramCount": 30,
+      "pairQueries": 465,
+      "uniquePairSums": 375,
+      "tripleQueries": 278,
+      "witness": [
+        [
+          0,
+          1,
+          12,
+          18,
+          24,
+          30
+        ],
+        [
+          1,
+          10,
+          16,
+          22,
+          28,
+          34
+        ],
+        [
+          1,
+          11,
+          17,
+          23,
+          29,
+          35
+        ],
+        [
+          1,
+          2,
+          14,
+          20,
+          26,
+          32
+        ],
+        [
+          1,
+          3,
+          15,
+          21,
+          27,
+          33
+        ]
+      ]
+    }
+  ],
+  "uniqueFiveGramSurvivor": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "formalBoundary": {
+    "provesByExhaustion": [
+      "The projective-class candidate family has 159516 oriented candidates.",
+      "Exactly 1584 candidates have rank at most two and Gram eigenvalues 30,6.",
+      "The participating six-point sets have exactly eight affine-or-swap set orbits.",
+      "Among those eight orbits, only the affine orbit of 6Z_36 admits five exceptional Gram matrices summing to 30I."
+    ],
+    "mathematicalLemmasRequiredOutsideThisCertificate": [
+      "A rank-two unimodular matrix has at most two projective row classes or at most two projective column classes.",
+      "For Fourier submatrices of F_36, projective classes are residue classes determined by gcd(36,V-V) and gcd(36,U-U).",
+      "The K30 block-Gram identities imply either the common-spectrum branch or the rank-two exceptional branch.",
+      "One exceptional block propagates the exceptional branch to all 25 fibre blocks."
+    ],
+    "notClaimed": [
+      "No Lean theorem is generated by this certificate.",
+      "The certificate does not prove the spectral-to-block-Gram reduction.",
+      "The certificate does not prove the subsequent K5 lift or the final Z180 tiling theorem."
+    ]
+  }
+}
+

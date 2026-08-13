@@ -1,0 +1,19 @@
+import Fuglede.Z180K30ExceptionalProjectiveProfileD6UValidityCorePilotV97
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D6S111
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D6S112
+
+/-! Bounded D6 U-validity leaf U08C09: 20 certified members. -/
+
+namespace Fuglede.Z180K30ExceptionalRawV2
+
+def z180K30ProjectiveD6UValidityMembersU08C09PilotV97 : List RawSet :=
+  [z180K30ProfileV97D6U08M0180, z180K30ProfileV97D6U08M0181, z180K30ProfileV97D6U08M0182, z180K30ProfileV97D6U08M0183, z180K30ProfileV97D6U08M0184, z180K30ProfileV97D6U08M0185, z180K30ProfileV97D6U08M0186, z180K30ProfileV97D6U08M0187, z180K30ProfileV97D6U08M0188, z180K30ProfileV97D6U08M0189, z180K30ProfileV97D6U08M0190, z180K30ProfileV97D6U08M0191, z180K30ProfileV97D6U08M0192, z180K30ProfileV97D6U08M0193, z180K30ProfileV97D6U08M0194, z180K30ProfileV97D6U08M0195, z180K30ProfileV97D6U08M0196, z180K30ProfileV97D6U08M0197, z180K30ProfileV97D6U08M0198, z180K30ProfileV97D6U08M0199]
+
+theorem z180_k30_projective_d6_u_validity_members_u08c09_forall_pilot_v97 :
+    List.Forall
+      (fun U => projectiveUProfileV97 6 U = z180K30ProjectiveD6UValidityProfileU08PilotV97)
+      z180K30ProjectiveD6UValidityMembersU08C09PilotV97 := by
+  unfold z180K30ProjectiveD6UValidityMembersU08C09PilotV97 z180K30ProjectiveD6UValidityProfileU08PilotV97
+  exact And.intro z180K30ProfileV97D6U08M0180_profile (And.intro z180K30ProfileV97D6U08M0181_profile (And.intro z180K30ProfileV97D6U08M0182_profile (And.intro z180K30ProfileV97D6U08M0183_profile (And.intro z180K30ProfileV97D6U08M0184_profile (And.intro z180K30ProfileV97D6U08M0185_profile (And.intro z180K30ProfileV97D6U08M0186_profile (And.intro z180K30ProfileV97D6U08M0187_profile (And.intro z180K30ProfileV97D6U08M0188_profile (And.intro z180K30ProfileV97D6U08M0189_profile (And.intro z180K30ProfileV97D6U08M0190_profile (And.intro z180K30ProfileV97D6U08M0191_profile (And.intro z180K30ProfileV97D6U08M0192_profile (And.intro z180K30ProfileV97D6U08M0193_profile (And.intro z180K30ProfileV97D6U08M0194_profile (And.intro z180K30ProfileV97D6U08M0195_profile (And.intro z180K30ProfileV97D6U08M0196_profile (And.intro z180K30ProfileV97D6U08M0197_profile (And.intro z180K30ProfileV97D6U08M0198_profile (z180K30ProfileV97D6U08M0199_profile)))))))))))))))))))
+
+end Fuglede.Z180K30ExceptionalRawV2

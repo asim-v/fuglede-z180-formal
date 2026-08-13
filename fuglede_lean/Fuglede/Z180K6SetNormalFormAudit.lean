@@ -1,0 +1,12 @@
+import Fuglede.Z180K6SetNormalForm
+
+#print axioms Fuglede.z180FifthFiber_exists_singleton_of_card_one
+#print axioms Fuglede.z180FifthFiber_exists_pair_of_card_two
+#print axioms Fuglede.z180_orderSixBase_pairing_eq_phase
+#print axioms Fuglede.z180FiveLevelFourierSum_eq_phase_of_singleton
+#print axioms Fuglede.z180FiveLevelFourierSum_eq_phase_sum_of_pair
+#print axioms Fuglede.z180_phi30_singleton_residues_eq
+#print axioms Fuglede.z180_phi30_double_residues_normal_form
+#print axioms Fuglede.z180_eq_six_points_of_fifthFibers
+#print axioms Fuglede.z180_card_six_phi30_defect_set_normal_form
+#print axioms Fuglede.z180_card_six_phi30_defect_set_normal_form_with_support

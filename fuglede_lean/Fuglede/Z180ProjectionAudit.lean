@@ -1,0 +1,5 @@
+import Fuglede.Z180Projection
+
+#print axioms Fuglede.z180_frequencyOrder_five_of_cast36_eq
+#print axioms Fuglede.z180_projection36_injOn_of_spectral_not_five_dvd
+#print axioms Fuglede.z180_projection36_spectrum_injOn_of_spectral_not_five_dvd

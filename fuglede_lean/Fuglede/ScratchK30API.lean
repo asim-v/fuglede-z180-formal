@@ -1,0 +1,21 @@
+import Fuglede.Z180K30ExceptionalSpectrumV62
+import Fuglede.Z180K30FourierProjectiveV74Fix
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.Tactic
+
+#check linearIndependent_pair
+#check linearIndependent_pair_iff
+#check linearIndependent_span
+#check finrank_span_eq_card
+#check Submodule.finrank_span_eq_card
+#check Submodule.eq_of_le_of_finrank_le
+#check Submodule.eq_of_le_of_finrank_eq
+#check Submodule.mem_span_singleton
+#check Submodule.span_induction
+#check Matrix.rank_eq_finrank_span_row
+#check Matrix.rank_conjTranspose_mul_self
+#check LinearMap.finrank_range_add_finrank_ker
+#check LinearMap.finrank_range_le
+#check LinearMap.finrank_range_eq_rank
+#check LinearMap.toMatrix_apply
+#check LinearMap.toMatrix_comp

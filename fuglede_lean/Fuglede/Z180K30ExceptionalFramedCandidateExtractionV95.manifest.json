@@ -1,0 +1,365 @@
+{
+  "schema": "z180-k30-framed-candidate-source-manifest/v1",
+  "generated_from": "source-only V95 snapshot",
+  "expected_source_count": 39,
+  "forbidden_tokens": [
+    "sorry",
+    "admit",
+    "axiom",
+    "native_decide"
+  ],
+  "build_order": [
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditCoreV95.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U01.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U05.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U07.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U11.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U13.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U17.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U19.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U23.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U25.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U29.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U31.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U35.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U01.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U05.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U07.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U11.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U13.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U17.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U19.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U23.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U25.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U29.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U31.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U35.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U01.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U05.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U07.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U11.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U13.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U17.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U19.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U23.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U25.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U29.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U31.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U35.lean",
+    "Fuglede/Z180K30ExceptionalAffineCandidateAuditAggregateV95.lean",
+    "Fuglede/Z180K30ExceptionalFramedCandidateExtractionV95.lean"
+  ],
+  "sources": [
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditCoreV95.lean",
+      "sha256": "ab38e572b4bda10f43d8493ef3be7f83fe59727aba644718e7de1a96c31c2110",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalOrbitSignatureWitnessV78Fix2",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U01.lean",
+      "sha256": "c98777a4ebda556c24e21b6f321a4f4e687835357a50accc03050d042b5cd61e",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U05.lean",
+      "sha256": "2e85cbb8137c926443703ff3e3e1f73ca0191620371008b48c91466f1a226ba1",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U07.lean",
+      "sha256": "1fbba0fe76633b689ec0ef8da089f421c60da1355ad0fbc3e1b4404f908bb91f",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U11.lean",
+      "sha256": "4a9b2b61323810e7ac231ec84b27e06c7bca6d9d0808166e4490c0c1c963c5d1",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U13.lean",
+      "sha256": "6a8c7e92839c3a5c1a82ea79d5de45e7d42f1c43233e0b3948144e7f5546887b",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U17.lean",
+      "sha256": "426eabfe21c08384f10b1d6650409be89511bd50f1ededde500d6bde887c985a",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U19.lean",
+      "sha256": "26baf1aa95d0955dfcd2ab27f87c1e3b3cc0adbe3dbae5eadb881a4c5cee9c42",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U23.lean",
+      "sha256": "c194504cb247b3c3729592573b90355cfe7957f0ca823c208cef917d6f5b2eed",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U25.lean",
+      "sha256": "1aebf3dd02c98571fc09b94736a98657425737044c1b3e0449cf8686ebf28245",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U29.lean",
+      "sha256": "3aeaf3e80ace5fc0d69d87e437063bbd7f145c6cf49a11b12d4b9a07810b627d",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U31.lean",
+      "sha256": "1684ee05a061c812dae1d288afcdf60aaaccee390e4fd67100e81f926272f859",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O0U35.lean",
+      "sha256": "937c48a6ea2f4a8d0041d9f2cc0fe4288c30fc695e4b298f8eb24aea144ddcfd",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U01.lean",
+      "sha256": "34735cfbcacab5d6af3753b24932c60f6bcb97b4fb117c0479ce4b91a76f36f4",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U05.lean",
+      "sha256": "c864bf0253fc11c4f003c80d13cdd22a8745bf4a697a128b805ec18add27d79b",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U07.lean",
+      "sha256": "ff445ea0bfa9662206b4a54a075300b94da77d7e11f7e553ecd1a8107403af20",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U11.lean",
+      "sha256": "eb22c2658bcbd7451c4b646c2ca850d80e3dfd00a79827bed9fbd7d88534f70f",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U13.lean",
+      "sha256": "93b24a4b99d5c36c2c0ed0cf5591fdd0a2a1f11e08ea4267e8dd61b8ed97d1f7",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U17.lean",
+      "sha256": "caf9569861a65128ffed0327656f59ab168d7e4088c3d2e05f0fc85911bf8023",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U19.lean",
+      "sha256": "59d554da17540bb087d0ea11b6c5fba8991b27da8cce220fb512c9dd9609d51b",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U23.lean",
+      "sha256": "d8c4eba76a09d16b71a039dee147d6e55f679972baeffda78c9f6dad610483fa",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U25.lean",
+      "sha256": "eeecf3eb83e717d5078470b89f0eedf0feee7c9fce7ce7d050e0fcaca83a7f5d",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U29.lean",
+      "sha256": "ba14bb42557ffafb99fe03f16824c89d48f30d9bdca780c3f462d4b5663b5864",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U31.lean",
+      "sha256": "6af3cbb5efb064db2b0c55ce16af3c91f108eb19f9479dc806ae5fa6accc9200",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O2U35.lean",
+      "sha256": "5c1ca4cea13415410e93fffa450a6b722e09d74c9b8ff2d301178ce208097cac",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U01.lean",
+      "sha256": "16bde23db9203f7140b7fe3e2bc0f7bac27cd2d90685f68a17b39e97514155cc",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U05.lean",
+      "sha256": "8fb07e94b9665ed31e7ae6d3ce43c81ed7a8ff80e6acb71219b860e578dd2cfa",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U07.lean",
+      "sha256": "60dfc67b6298fdcc5e6936cd902ef4c9fd58ccc8e47d8958d255052ec3e9ea10",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U11.lean",
+      "sha256": "37ae38ef1d084832e4021d2f04d5a2a9815e5710bb83e6a1a1c39c5ee3444348",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U13.lean",
+      "sha256": "45388b4e13f19a22c4e35522720ef9cbe1d9e8c0dbc0531a80f5b11206e0c99d",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U17.lean",
+      "sha256": "e641a515c4a52b42170c82b05c952864be6efea70ad22d2b538525548ecb4873",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U19.lean",
+      "sha256": "6824eafd3364acc4e51bbbc5bfe731de660c5a6092eaf6067f74ddf5110eb0a1",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U23.lean",
+      "sha256": "5ab90a650bcfb2a64f0644176f5be882f51c64ca4409a6f4943455fe8406e890",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U25.lean",
+      "sha256": "50cbf9165b612d56ce86e4218acea54fb2d5a19065afa37fa24c94a293285157",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U29.lean",
+      "sha256": "0f0d75e73606d5c8d96c67e8dd6a458927a278d34184635c24dddd996e6cbc14",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U31.lean",
+      "sha256": "eb37bc5902982132e307d7bddeb703f652022817ed63a0101fed62da9d30606d",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditV95O4U35.lean",
+      "sha256": "15c38a95936b42284d2b4f8cb045fb01b272d7e9606471b016daa095545e5f58",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditCoreV95"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalAffineCandidateAuditAggregateV95.lean",
+      "sha256": "6e49beb2f976ffdc930d54cb7bc52dad6a57727430ba7d79fcc15126d9b9a18e",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U01",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U05",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U07",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U11",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U13",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U17",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U19",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U23",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U25",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U29",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U31",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O0U35",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U01",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U05",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U07",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U11",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U13",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U17",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U19",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U23",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U25",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U29",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U31",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O2U35",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U01",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U05",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U07",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U11",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U13",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U17",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U19",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U23",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U25",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U29",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U31",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditV95O4U35"
+      ]
+    },
+    {
+      "path": "Fuglede/Z180K30ExceptionalFramedCandidateExtractionV95.lean",
+      "sha256": "8fc78e814cceec86130ea65b13c290691ecaa2d466ec8363619c8a3b789a890d",
+      "imports": [
+        "Fuglede.Z180K30ExceptionalCommonFrameCovarianceV93",
+        "Fuglede.Z180K30ExceptionalOrbitFrameExtractionV85Fix3",
+        "Fuglede.Z180K30ExceptionalAffineCandidateAuditAggregateV95"
+      ]
+    }
+  ]
+}

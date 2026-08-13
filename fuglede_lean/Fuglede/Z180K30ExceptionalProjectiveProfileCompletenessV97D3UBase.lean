@@ -1,0 +1,49 @@
+import Fuglede.Z180K30ExceptionalProjectiveProfileCompletenessPartitionCoreV97
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S000
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S001
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S002
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S003
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S004
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S005
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S006
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S007
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S008
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S009
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S010
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S011
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S012
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S013
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S014
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S015
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S016
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S017
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S018
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S019
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S020
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S021
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S022
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D3S023
+
+/-! Generated hash partitions for divisor 3, side U. -/
+
+namespace Fuglede.Z180K30ExceptionalRawV2
+
+def z180K30ProjectiveCompletenessV97D3UPredicate (bucket : Nat) (set : RawSet) : Bool :=
+  normalizedProjectiveRawSetKeyV89 set % 2 == bucket
+
+def z180K30ProjectiveCompletenessV97D3USourceGrouped : List RawSet :=
+  [z180K30ProfileV97D3U00M0000, z180K30ProfileV97D3U00M0001, z180K30ProfileV97D3U00M0002, z180K30ProfileV97D3U00M0003, z180K30ProfileV97D3U01M0000, z180K30ProfileV97D3U01M0001, z180K30ProfileV97D3U02M0000, z180K30ProfileV97D3U02M0001, z180K30ProfileV97D3U03M0000, z180K30ProfileV97D3U03M0001, z180K30ProfileV97D3U04M0000]
+def z180K30ProjectiveCompletenessV97D3USourceBucketB00 : List RawSet :=
+  (z180K30ProjectiveCompletenessV97D3USourceGrouped).filter (z180K30ProjectiveCompletenessV97D3UPredicate 0)
+
+def z180K30ProjectiveCompletenessV97D3UTargetBucketB00 : List RawSet :=
+  (normalizedProjectiveUniqueUChoicesV89 3).filter
+    (z180K30ProjectiveCompletenessV97D3UPredicate 0)
+def z180K30ProjectiveCompletenessV97D3USourceBucketB01 : List RawSet :=
+  (z180K30ProjectiveCompletenessV97D3USourceGrouped).filter (z180K30ProjectiveCompletenessV97D3UPredicate 1)
+
+def z180K30ProjectiveCompletenessV97D3UTargetBucketB01 : List RawSet :=
+  (normalizedProjectiveUniqueUChoicesV89 3).filter
+    (z180K30ProjectiveCompletenessV97D3UPredicate 1)
+
+end Fuglede.Z180K30ExceptionalRawV2

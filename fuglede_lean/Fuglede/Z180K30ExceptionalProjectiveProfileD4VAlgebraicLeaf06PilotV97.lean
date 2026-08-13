@@ -1,0 +1,13 @@
+import Fuglede.Z180K30ExceptionalProjectiveProfileD4VAlgebraicCorePilotV97
+
+/-! D4-V bounded algebraic bridge leaf 6, size 10. -/
+
+namespace Fuglede.Z180K30ExceptionalRawV2
+
+theorem z180_k30_projective_d4_v_algebraic_leaf_06_pilot_v97 :
+    [3, 11, 21, 37, 10, 31, 43, 20, 42, 36].map z180K30ProjectiveD4VSourceAtPilotV97 =
+      z180K30ProjectiveD4VCombPilotV97
+        [0, 4, 8] [16, 20, 24, 28, 32] 3 := by
+  decide
+
+end Fuglede.Z180K30ExceptionalRawV2

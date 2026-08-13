@@ -1,0 +1,9 @@
+import Fuglede.Z180K30ExceptionalRawGramComplexV76Fix3
+import Mathlib.Tactic
+#check List.map_congr_left
+#check List.sum_congr
+#check List.map_flatMap
+#check List.sum_flatten
+#check List.map_map
+#check List.map_eq_map_iff
+#check List.ext_get

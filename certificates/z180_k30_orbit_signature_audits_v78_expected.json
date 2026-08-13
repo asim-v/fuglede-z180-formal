@@ -1,0 +1,25 @@
+{
+  "schema": "z180-k30-orbit-signature-audit-v78-expected-1",
+  "core": "fuglede_lean/Fuglede/Z180K30ExceptionalOrbitSignatureAuditV78.lean",
+  "generator": "scripts/generate_z180_k30_orbit_signature_audits_v78.py",
+  "leaf_pattern": "fuglede_lean/Fuglede/Z180K30ExceptionalOrbitSignatureAuditV78O{o}R{r}.lean",
+  "column_orbits": [0, 1, 2, 3, 4, 5, 6],
+  "row_orbits": [0, 1, 2, 3, 4, 5, 6, 7],
+  "leaf_count": 56,
+  "enumerated_per_leaf": 432,
+  "uncovered_per_leaf": 0,
+  "accepted_432": [
+    [0, 7],
+    [1, 7],
+    [2, 4],
+    [3, 7],
+    [4, 2],
+    [5, 7],
+    [6, 7]
+  ],
+  "totals": {
+    "enumerated": 24192,
+    "accepted": 3024,
+    "uncovered": 0
+  }
+}

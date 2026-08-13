@@ -1,0 +1,67 @@
+import Fuglede.Z180K30ExceptionalProjectiveProfileCompletenessPartitionCoreV97
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S000
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S001
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S002
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S003
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S004
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S005
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S006
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S007
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S008
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S009
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S010
+import Fuglede.Z180K30ExceptionalProjectiveProfileMembersV97D4S011
+
+/-! Generated hash partitions for divisor 4, side V. -/
+
+namespace Fuglede.Z180K30ExceptionalRawV2
+
+def z180K30ProjectiveCompletenessV97D4VPredicate (bucket : Nat) (set : RawSet) : Bool :=
+  normalizedProjectiveRawSetKeyV89 set % 7 == bucket
+
+def z180K30ProjectiveCompletenessV97D4VSourceGrouped : List RawSet :=
+  [z180K30ProfileV97D4V00M0000, z180K30ProfileV97D4V00M0001, z180K30ProfileV97D4V00M0002, z180K30ProfileV97D4V00M0003, z180K30ProfileV97D4V00M0004, z180K30ProfileV97D4V00M0005, z180K30ProfileV97D4V01M0000, z180K30ProfileV97D4V01M0001, z180K30ProfileV97D4V01M0002, z180K30ProfileV97D4V01M0003, z180K30ProfileV97D4V01M0004, z180K30ProfileV97D4V01M0005, z180K30ProfileV97D4V01M0006, z180K30ProfileV97D4V01M0007, z180K30ProfileV97D4V01M0008, z180K30ProfileV97D4V01M0009, z180K30ProfileV97D4V01M0010, z180K30ProfileV97D4V01M0011, z180K30ProfileV97D4V02M0000, z180K30ProfileV97D4V02M0001, z180K30ProfileV97D4V02M0002, z180K30ProfileV97D4V02M0003, z180K30ProfileV97D4V02M0004, z180K30ProfileV97D4V02M0005, z180K30ProfileV97D4V02M0006, z180K30ProfileV97D4V02M0007, z180K30ProfileV97D4V02M0008, z180K30ProfileV97D4V02M0009, z180K30ProfileV97D4V02M0010, z180K30ProfileV97D4V02M0011, z180K30ProfileV97D4V03M0000, z180K30ProfileV97D4V03M0001, z180K30ProfileV97D4V03M0002, z180K30ProfileV97D4V03M0003, z180K30ProfileV97D4V03M0004, z180K30ProfileV97D4V03M0005, z180K30ProfileV97D4V04M0000, z180K30ProfileV97D4V04M0001, z180K30ProfileV97D4V04M0002, z180K30ProfileV97D4V04M0003, z180K30ProfileV97D4V04M0004, z180K30ProfileV97D4V04M0005, z180K30ProfileV97D4V05M0000, z180K30ProfileV97D4V05M0001, z180K30ProfileV97D4V05M0002, z180K30ProfileV97D4V05M0003, z180K30ProfileV97D4V05M0004, z180K30ProfileV97D4V05M0005, z180K30ProfileV97D4V05M0006, z180K30ProfileV97D4V05M0007, z180K30ProfileV97D4V05M0008, z180K30ProfileV97D4V05M0009, z180K30ProfileV97D4V05M0010, z180K30ProfileV97D4V05M0011, z180K30ProfileV97D4V06M0000, z180K30ProfileV97D4V06M0001]
+def z180K30ProjectiveCompletenessV97D4VSourceBucketB00 : List RawSet :=
+  (z180K30ProjectiveCompletenessV97D4VSourceGrouped).filter (z180K30ProjectiveCompletenessV97D4VPredicate 0)
+
+def z180K30ProjectiveCompletenessV97D4VTargetBucketB00 : List RawSet :=
+  (normalizedProjectiveUniqueVChoicesV89 4).filter
+    (z180K30ProjectiveCompletenessV97D4VPredicate 0)
+def z180K30ProjectiveCompletenessV97D4VSourceBucketB01 : List RawSet :=
+  (z180K30ProjectiveCompletenessV97D4VSourceGrouped).filter (z180K30ProjectiveCompletenessV97D4VPredicate 1)
+
+def z180K30ProjectiveCompletenessV97D4VTargetBucketB01 : List RawSet :=
+  (normalizedProjectiveUniqueVChoicesV89 4).filter
+    (z180K30ProjectiveCompletenessV97D4VPredicate 1)
+def z180K30ProjectiveCompletenessV97D4VSourceBucketB02 : List RawSet :=
+  (z180K30ProjectiveCompletenessV97D4VSourceGrouped).filter (z180K30ProjectiveCompletenessV97D4VPredicate 2)
+
+def z180K30ProjectiveCompletenessV97D4VTargetBucketB02 : List RawSet :=
+  (normalizedProjectiveUniqueVChoicesV89 4).filter
+    (z180K30ProjectiveCompletenessV97D4VPredicate 2)
+def z180K30ProjectiveCompletenessV97D4VSourceBucketB03 : List RawSet :=
+  (z180K30ProjectiveCompletenessV97D4VSourceGrouped).filter (z180K30ProjectiveCompletenessV97D4VPredicate 3)
+
+def z180K30ProjectiveCompletenessV97D4VTargetBucketB03 : List RawSet :=
+  (normalizedProjectiveUniqueVChoicesV89 4).filter
+    (z180K30ProjectiveCompletenessV97D4VPredicate 3)
+def z180K30ProjectiveCompletenessV97D4VSourceBucketB04 : List RawSet :=
+  (z180K30ProjectiveCompletenessV97D4VSourceGrouped).filter (z180K30ProjectiveCompletenessV97D4VPredicate 4)
+
+def z180K30ProjectiveCompletenessV97D4VTargetBucketB04 : List RawSet :=
+  (normalizedProjectiveUniqueVChoicesV89 4).filter
+    (z180K30ProjectiveCompletenessV97D4VPredicate 4)
+def z180K30ProjectiveCompletenessV97D4VSourceBucketB05 : List RawSet :=
+  (z180K30ProjectiveCompletenessV97D4VSourceGrouped).filter (z180K30ProjectiveCompletenessV97D4VPredicate 5)
+
+def z180K30ProjectiveCompletenessV97D4VTargetBucketB05 : List RawSet :=
+  (normalizedProjectiveUniqueVChoicesV89 4).filter
+    (z180K30ProjectiveCompletenessV97D4VPredicate 5)
+def z180K30ProjectiveCompletenessV97D4VSourceBucketB06 : List RawSet :=
+  (z180K30ProjectiveCompletenessV97D4VSourceGrouped).filter (z180K30ProjectiveCompletenessV97D4VPredicate 6)
+
+def z180K30ProjectiveCompletenessV97D4VTargetBucketB06 : List RawSet :=
+  (normalizedProjectiveUniqueVChoicesV89 4).filter
+    (z180K30ProjectiveCompletenessV97D4VPredicate 6)
+
+end Fuglede.Z180K30ExceptionalRawV2

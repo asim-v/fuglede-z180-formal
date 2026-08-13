@@ -1,0 +1,24 @@
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.Tactic
+
+#check linearIndependent_pair'
+#check linearIndependent_pair_iff'
+#check linearIndependent_insert
+#check linearIndependent_insert'
+#check linearIndependent_insert_iff
+#check linearIndependent_insert_iff'
+#check linearIndependent_finset_toSet
+#check Fintype.linearIndependent_iff
+#check Fintype.linearIndependent_iff'
+#check linearIndependent_iff
+#check linearIndependent_iff_injective_finsuppLinearCombination
+#check linearIndependent_unique_iff
+#check linearIndependent_option'
+#check Finset.linearIndependent_iff
+#check Finset.finrank_span_eq_card
+#check Set.finrank_insert
+#check Submodule.finrank_sup_add_finrank_inf_eq
+#check Submodule.finrank_span_le_card
+#check finrank_span_le_card
+#check FiniteDimensional.finrank_eq_card_basis
+#check LinearIndependent.fintype_card_le_finrank_of_span_eq_top

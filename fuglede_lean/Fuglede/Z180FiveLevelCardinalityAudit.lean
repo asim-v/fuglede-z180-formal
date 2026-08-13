@@ -1,0 +1,8 @@
+import Fuglede.Z180FiveLevelCardinality
+
+#print axioms Fuglede.sum_z180FifthFiberCard
+#print axioms Fuglede.z180FifthFiberCard_pos_of_exists
+#print axioms Fuglede.z180_card_six_fifthFiber_profile_cases
+#print axioms Fuglede.z180_card_six_fifthFiber_unique_double
+#print axioms Fuglede.z180_card_six_phi30_defect_fifthFiber_profile_cases
+#print axioms Fuglede.z180_card_six_phi30_defect_fifthFiber_unique_double

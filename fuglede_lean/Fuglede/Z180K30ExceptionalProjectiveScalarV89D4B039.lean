@@ -1,0 +1,216 @@
+import Fuglede.Z180K30ExceptionalProjectiveLiteralLeafCoreV89
+
+/-! Generated exact literal scalar-audit leaf; authenticated by the manifest. -/
+
+namespace Fuglede.Z180K30ExceptionalRawV2
+
+def z180K30ProjectiveScalarV89D4B039UGroup : List RawSet :=
+[
+  [0, 1, 9, 10, 18, 19],
+  [0, 1, 9, 10, 18, 27],
+  [0, 1, 9, 10, 18, 28],
+  [0, 1, 9, 10, 19, 27],
+  [0, 1, 9, 10, 19, 28],
+  [0, 1, 9, 10, 27, 28],
+  [0, 1, 9, 18, 19, 27],
+  [0, 1, 9, 18, 19, 28],
+  [0, 1, 9, 18, 27, 28],
+  [0, 1, 9, 19, 27, 28],
+  [0, 1, 10, 18, 19, 27],
+  [0, 1, 10, 18, 19, 28],
+  [0, 1, 10, 18, 27, 28],
+  [0, 1, 10, 19, 27, 28],
+  [0, 1, 18, 19, 27, 28],
+  [0, 9, 10, 18, 19, 27],
+  [0, 9, 10, 18, 19, 28],
+  [0, 9, 10, 18, 27, 28],
+  [0, 9, 10, 19, 27, 28],
+  [0, 9, 18, 19, 27, 28]
+]
+
+def z180K30ProjectiveScalarV89D4B039VGroup : List RawSet :=
+[
+  [0, 8, 12, 16, 24, 32]
+]
+
+def z180K30ProjectiveScalarV89D4B039Pair00 : RawSet × RawSet := ([0, 1, 9, 10, 18, 19], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair01 : RawSet × RawSet := ([0, 1, 9, 10, 18, 27], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair02 : RawSet × RawSet := ([0, 1, 9, 10, 18, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair03 : RawSet × RawSet := ([0, 1, 9, 10, 19, 27], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair04 : RawSet × RawSet := ([0, 1, 9, 10, 19, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair05 : RawSet × RawSet := ([0, 1, 9, 10, 27, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair06 : RawSet × RawSet := ([0, 1, 9, 18, 19, 27], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair07 : RawSet × RawSet := ([0, 1, 9, 18, 19, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair08 : RawSet × RawSet := ([0, 1, 9, 18, 27, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair09 : RawSet × RawSet := ([0, 1, 9, 19, 27, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair10 : RawSet × RawSet := ([0, 1, 10, 18, 19, 27], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair11 : RawSet × RawSet := ([0, 1, 10, 18, 19, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair12 : RawSet × RawSet := ([0, 1, 10, 18, 27, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair13 : RawSet × RawSet := ([0, 1, 10, 19, 27, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair14 : RawSet × RawSet := ([0, 1, 18, 19, 27, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair15 : RawSet × RawSet := ([0, 9, 10, 18, 19, 27], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair16 : RawSet × RawSet := ([0, 9, 10, 18, 19, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair17 : RawSet × RawSet := ([0, 9, 10, 18, 27, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair18 : RawSet × RawSet := ([0, 9, 10, 19, 27, 28], [0, 8, 12, 16, 24, 32])
+def z180K30ProjectiveScalarV89D4B039Pair19 : RawSet × RawSet := ([0, 9, 18, 19, 27, 28], [0, 8, 12, 16, 24, 32])
+
+def z180K30ProjectiveScalarV89D4B039Pairs : List (RawSet × RawSet) :=
+[
+  z180K30ProjectiveScalarV89D4B039Pair00,
+  z180K30ProjectiveScalarV89D4B039Pair01,
+  z180K30ProjectiveScalarV89D4B039Pair02,
+  z180K30ProjectiveScalarV89D4B039Pair03,
+  z180K30ProjectiveScalarV89D4B039Pair04,
+  z180K30ProjectiveScalarV89D4B039Pair05,
+  z180K30ProjectiveScalarV89D4B039Pair06,
+  z180K30ProjectiveScalarV89D4B039Pair07,
+  z180K30ProjectiveScalarV89D4B039Pair08,
+  z180K30ProjectiveScalarV89D4B039Pair09,
+  z180K30ProjectiveScalarV89D4B039Pair10,
+  z180K30ProjectiveScalarV89D4B039Pair11,
+  z180K30ProjectiveScalarV89D4B039Pair12,
+  z180K30ProjectiveScalarV89D4B039Pair13,
+  z180K30ProjectiveScalarV89D4B039Pair14,
+  z180K30ProjectiveScalarV89D4B039Pair15,
+  z180K30ProjectiveScalarV89D4B039Pair16,
+  z180K30ProjectiveScalarV89D4B039Pair17,
+  z180K30ProjectiveScalarV89D4B039Pair18,
+  z180K30ProjectiveScalarV89D4B039Pair19
+]
+
+
+
+theorem z180K30ProjectiveScalarV89D4B039Pairs_eq :
+    z180K30ProjectiveScalarV89D4B039Pairs =
+      normalizedProjectiveLiteralCartesianPairsV89
+        z180K30ProjectiveScalarV89D4B039UGroup z180K30ProjectiveScalarV89D4B039VGroup := by
+  decide
+
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair00Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair00 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair01Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair01 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair02Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair02 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair03Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair03 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair04Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair04 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair05Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair05 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair06Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair06 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair07Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair07 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair08Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair08 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair09Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair09 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair10Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair10 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair11Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair11 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair12Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair12 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair13Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair13 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair14Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair14 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair15Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair15 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair16Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair16 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair17Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair17 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair18Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair18 = true := by
+  decide
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem z180K30ProjectiveScalarV89D4B039Pair19Refuted :
+    normalizedProjectiveScalarBothRefutedB_v89 z180K30ProjectiveScalarV89D4B039Pair19 = true := by
+  decide
+
+theorem z180K30ProjectiveScalarV89D4B039Audit :
+    z180K30ProjectiveScalarV89D4B039Pairs.all normalizedProjectiveScalarBothRefutedB_v89 = true := by
+  simp [z180K30ProjectiveScalarV89D4B039Pairs,
+    z180K30ProjectiveScalarV89D4B039Pair00Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair01Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair02Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair03Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair04Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair05Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair06Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair07Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair08Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair09Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair10Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair11Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair12Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair13Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair14Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair15Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair16Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair17Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair18Refuted,
+    z180K30ProjectiveScalarV89D4B039Pair19Refuted]
+
+#print axioms z180K30ProjectiveScalarV89D4B039Audit
+
+end Fuglede.Z180K30ExceptionalRawV2

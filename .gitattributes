@@ -1,0 +1,4 @@
+# Hash manifests authenticate exact bytes, including existing line endings.
+# Disable Git's newline conversion so a fresh clone reproduces those hashes.
+* -text
+*.pdf binary

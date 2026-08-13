@@ -1,0 +1,2027 @@
+{
+  "aggregate": {
+    "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombBridgePilotV97.lean",
+    "file_sha256": "e357af2d1507d28797815b7e3e559bb623efbcc847c1090705fb9e0d4187305d"
+  },
+  "generator": "scripts/generate_z180_k30_d3v_comb_bridge_v97.py",
+  "generator_sha256": "2a80d0178d0d98d49cf1900521360784de81f3529183be4efc8910794ab2d90e",
+  "inputs": {
+    "Fuglede.lean": "879234cbbdaee7bbc842bd57da1ceff5fbd1b6f60ba114dd398b6c7beb548d06",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileCompletenessV97D3VBase.lean": "8e31e55860ca510eaa912c7f320b801779bc44577a8267d64449512f120f9595",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombCorePilotV97.lean": "c72b4e27423a937ebd63f41fe399544688311efbae9420e0fa14b046ebd56aa8",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileD3VIndexPermBasePilotV97.lean": "f04e26165263568fac11c42438ea1dfdeefb3cbdb985a83d1b859876f1badfdb",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileD3VIndexPermPilotV97.lean": "2b177b175ddd8bf9ba8f90af756ea252655dc138b3cab3fc0367f343beb194de",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileDataV97D3.lean": "fdbf2525290653fb7df09cff8d016fefc90ca1772a633cf9a21cd80fd3713b92",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S000.lean": "a78bb356d69048374bd331c6e184a0daedefe19414ebd44733dbff1c93db21be",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S001.lean": "5d2dba5a7d3e04f63c891a1d1d2675b5aa1352d06a3174b0809047b517d1c7e0",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S002.lean": "e5f3ff57331ac9ded540c5bdb07d9e9a7fe2d3bdb6711bfd6b32775eb34f6144",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S003.lean": "02ce61f956b3f0f8f9e5479e3c64b0a6ed8e1d03601ae5aea9be223fe455aadd",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S004.lean": "af23813589e46b58d959e1ab3f54ce99348002666c403891ddbe28ec50753b12",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S005.lean": "86e77ce25f76bdc9c26717210d475a3840c4bc47ac04e162d64d81a273f188c5",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S006.lean": "8b6e07c0a8637a5c179b04182681ce8dbc3f1d1039ab72ab2cd8ba10568e133c",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S007.lean": "031268c73f3a7e8dfc6c1227c6bb1c663a68cbb71deb94cfade2e5ca6cc5d767",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S008.lean": "12c0edb0011af5d2b6ef43584d4cf5a662f159b47477b435e795fdf43058ee3e",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S009.lean": "72f5e0899ca855fa71956de0112f4d747c77ca38f6b4b6bf7e2797271b89737a",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S010.lean": "80800bf0cda342f839d0c1855426269afd3811ad674e9de95d1dea6e342e08dc",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S011.lean": "ad6756c9371cf4f6b96a589a4df115d945b0b4620b5735e7d39f458010a1e2a6",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S012.lean": "26d50397528ec2dc1637b3790a43c968929e84f5dd9f5f92c6681fd053c38533",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S013.lean": "771bbb9b5923d12a8fe91122b2f100809d9401227e6bd5d5dfadece9dc385aeb",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S014.lean": "36e7a61d8713b767709fc9ff4e1594bc96055c49bed7c5d36e52263ef48672b6",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S015.lean": "4abff8c214b9186d7ea2fde5bb6bc8133a2300730d4c84533854e194f2d30813",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S016.lean": "5fb94af0287d5d94185782834c834688780948db07d528a391e9eea33e43cd9c",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S017.lean": "af2f6cbe8c534b0fc67a63a0e7227af5e8a8e7f5f19080f0d606d48922dd2401",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S018.lean": "881cb7c9bdc0d8d08b28458840afdbf461ff8d4f119fae2fc95c7d5c476bfb74",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S019.lean": "d771d5d801602a2996753329f3833d58da260ec089fde90424f48ebc2ab50309",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S020.lean": "90c18eaadc7f73fd34544f06dc7da4221cae1070453f15141bffa815da41a9da",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S021.lean": "f64f22ca58bd1b39fabd2f516f9ed5c3359ba2abd002b4b0e2bd948a5c5dbde6",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S022.lean": "3f6e69b3aa62d0d7550cd640681538ef7616d79e8f474a8415bb76daae420fce",
+    "Fuglede/Z180K30ExceptionalProjectiveProfileMembersV97D3S023.lean": "d0c0f5b343aa0e0c3602d7ac391c0d0c4d24a8ebaa5689dbe82c73f9d552080c"
+  },
+  "invariants": {
+    "active_manifests_isolated": true,
+    "canonical_indices_sha256": "ce6c4e52e7d7836dfc9a26635dc94147f2692ee4809fc5acc348000a521aa720",
+    "forbidden_lean_tokens_absent": true,
+    "fuel": 6,
+    "generated_import_graph_acyclic": true,
+    "leaf_count": 63,
+    "maximum_rawsets_per_decision": 10,
+    "root_targets_sha256": "f1e28c23514954e1d5cc2ba07457fd662a3dbe1e96632bd7193cea09c610fded",
+    "source_names_sha256": "85f49eee0e4174cbe1d0a5516198a4dc31ab622909f8dc0ddcbd446593db63e4",
+    "total_rawsets": 462
+  },
+  "leaves": [
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf00PilotV97.lean",
+      "file_sha256": "c637fcd86cd37ba341a554a6d8e5105f21df7d527c01ff542b57562432636cf0",
+      "indices": [
+        5
+      ],
+      "length": 5,
+      "number": 0,
+      "offset": 0,
+      "prefix": [
+        0
+      ],
+      "size": 1,
+      "targets_sha256": "b812143d163644e17c47872590878d7d157ae9e37d5065ef5b288fa5ba4bed56"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf01PilotV97.lean",
+      "file_sha256": "41b9f6fde8d432e8a1fbdd12606c2f884152d5c54413c79ce94c6bea3b74c45d",
+      "indices": [
+        17,
+        41,
+        53,
+        40,
+        16
+      ],
+      "length": 4,
+      "number": 1,
+      "offset": 1,
+      "prefix": [
+        0,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "b0e3ff068bde04c626f837d8915d4f34ab8a16f89e4be55a761fa47c5081c986"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf02PilotV97.lean",
+      "file_sha256": "34a93652619d6a9598a74f16d3227e2525056e28e721432fd87c5796eb4643b4",
+      "indices": [
+        39,
+        65,
+        89,
+        113,
+        119
+      ],
+      "length": 4,
+      "number": 2,
+      "offset": 6,
+      "prefix": [
+        0,
+        15
+      ],
+      "size": 5,
+      "targets_sha256": "5396122b6d3da916355e9a45eb117c32766742ab6f2b83526529dcc68ff64d55"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf03PilotV97.lean",
+      "file_sha256": "ef6fc75542e9dfb8fd11bdacd8783b414b8314ba98e56a7ab06bc22cd6d0251a",
+      "indices": [
+        131,
+        155,
+        167,
+        112,
+        179,
+        154,
+        88,
+        130,
+        64,
+        38
+      ],
+      "length": 3,
+      "number": 3,
+      "offset": 11,
+      "prefix": [
+        0,
+        15,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "cf0d04c3f1eedcb6040ddc8b7278cc2a02a5154967f7de2dd479c8b013573b53"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf04PilotV97.lean",
+      "file_sha256": "3973c1eb749fde8c43e3c77087e5781ab93a9db757bc289ba848e4bb781904bc",
+      "indices": [
+        52,
+        87,
+        191,
+        203,
+        111
+      ],
+      "length": 4,
+      "number": 4,
+      "offset": 21,
+      "prefix": [
+        0,
+        12
+      ],
+      "size": 5,
+      "targets_sha256": "96619328a3f3da62c2a8a8950ca476ab3980982fd11aae0c8ae94ecaa9b8ec76"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf05PilotV97.lean",
+      "file_sha256": "9d1c8fd5ac61d7a61ad860b43f272681e653964c2ee9bd9f20205fd7d6674f40",
+      "indices": [
+        153,
+        215,
+        239,
+        251,
+        275,
+        299,
+        311,
+        323,
+        250,
+        110
+      ],
+      "length": 3,
+      "number": 5,
+      "offset": 26,
+      "prefix": [
+        0,
+        12,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "6813dc1d1b0d7ee4eff0af813f5228a4755c582d07d49a683ddb96e7b4fa61f6"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf06PilotV97.lean",
+      "file_sha256": "79e6e70f861064d20e15bbe653de304fb6dd67741fc0c7d34c4c8eab99d5e718",
+      "indices": [
+        178,
+        274,
+        347,
+        322,
+        359,
+        371,
+        298,
+        346,
+        238,
+        202
+      ],
+      "length": 3,
+      "number": 6,
+      "offset": 36,
+      "prefix": [
+        0,
+        12,
+        15
+      ],
+      "size": 10,
+      "targets_sha256": "85168c7737fd5a7e76bf6f1e0efcdf9bd4a147d101753755b779fdee26b9ecb2"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf07PilotV97.lean",
+      "file_sha256": "bf64fa8bb7a9c8e44cb75531199de35c06aa0aba832ab94ef3754b3f40eb0f87",
+      "indices": [
+        374,
+        358,
+        273,
+        272,
+        214,
+        190,
+        177,
+        152,
+        86,
+        51
+      ],
+      "length": 2,
+      "number": 7,
+      "offset": 46,
+      "prefix": [
+        0,
+        12,
+        15,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "9a50bfeeb183e1ec4a48a3361cb5b48fa1c83a364cf59bacbfd243e1d92e950e"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf08PilotV97.lean",
+      "file_sha256": "99e9c29844148aede96e2387cf069b13ea958dc8970c40ee9f3e11dde9e6ab30",
+      "indices": [
+        37,
+        109,
+        201,
+        189,
+        85
+      ],
+      "length": 4,
+      "number": 8,
+      "offset": 56,
+      "prefix": [
+        0,
+        9
+      ],
+      "size": 5,
+      "targets_sha256": "c30f7d4b0327a7783cfd8144f8b59a67cfa9d439ef1d96adcdeb956f1f2e7ac7"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf09PilotV97.lean",
+      "file_sha256": "8f4f008641142d7de8a1ce0d82bb5de55c7991398268f9b3f44f6affc12bfdc8",
+      "indices": [
+        166,
+        237,
+        386,
+        310,
+        345,
+        398,
+        385,
+        344,
+        236,
+        165
+      ],
+      "length": 3,
+      "number": 9,
+      "offset": 61,
+      "prefix": [
+        0,
+        9,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "16e7c8f6741f33a5dd3c1102d5041beab1c5d452dc9ecd9de3f9d6c1794432bf"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf10PilotV97.lean",
+      "file_sha256": "a37ecd609ec41c004ed75daba1f50849f2cc0e6673098e46d1c3ac553bef2e69",
+      "indices": [
+        151,
+        297,
+        397,
+        296,
+        370,
+        410,
+        422,
+        434,
+        440,
+        235
+      ],
+      "length": 3,
+      "number": 10,
+      "offset": 71,
+      "prefix": [
+        0,
+        9,
+        15
+      ],
+      "size": 10,
+      "targets_sha256": "8051140f8f57da42b0770adf737440a3183a4f80ac67f42679c1dd422d2def6b"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf11PilotV97.lean",
+      "file_sha256": "3a3640345c22790fa5be7e17033a8b86a697b465eeca1de327a5c217f451e20a",
+      "indices": [
+        357,
+        446,
+        458,
+        457,
+        421,
+        384,
+        271,
+        295,
+        309,
+        84
+      ],
+      "length": 2,
+      "number": 11,
+      "offset": 81,
+      "prefix": [
+        0,
+        9,
+        15,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "90c585c881be6f858548b0d799be71aadb0fb608502173830717c1823ceffeb6"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf12PilotV97.lean",
+      "file_sha256": "429a0b9a80cf468c4c9c39d52f865357140c0afd5493b103b604d27c8d73633d",
+      "indices": [
+        129,
+        321,
+        343,
+        270,
+        342,
+        433,
+        456,
+        460,
+        432,
+        341
+      ],
+      "length": 3,
+      "number": 12,
+      "offset": 91,
+      "prefix": [
+        0,
+        9,
+        12
+      ],
+      "size": 10,
+      "targets_sha256": "f14ea4b02a1a3dd19ec1d4ef36ebdbd0def456a855dc2bc1c13c7df39626ff39"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf13PilotV97.lean",
+      "file_sha256": "27a6313df5342fab031a21d495c5672e779c1b6697f3b43ee2241ad9563fa616",
+      "indices": [
+        269,
+        455,
+        445,
+        431,
+        409,
+        396,
+        340,
+        395,
+        383,
+        188
+      ],
+      "length": 2,
+      "number": 13,
+      "offset": 101,
+      "prefix": [
+        0,
+        9,
+        12,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "66dad96daca3e01e61be5a91eecac1ed02b7d229cb8bc9f6a561d57f4ba1ab9b"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf14PilotV97.lean",
+      "file_sha256": "21ce6d0a322204b53cc2530a9844eb339aca834c6155763ef9aa8b3137be60c8",
+      "indices": [
+        176,
+        268,
+        356,
+        339,
+        369,
+        338,
+        320,
+        294,
+        234,
+        200
+      ],
+      "length": 2,
+      "number": 14,
+      "offset": 111,
+      "prefix": [
+        0,
+        9,
+        12,
+        15
+      ],
+      "size": 10,
+      "targets_sha256": "69756cbece6f039f2499c719d8391de2a32d1c54ee6865dd69ce672643ef9758"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf15PilotV97.lean",
+      "file_sha256": "57dc3fc06a4e3e04615d73bfe2641a10703a6dafc5833d7944f120db3a4a16db",
+      "indices": [
+        128,
+        150,
+        164,
+        108,
+        36
+      ],
+      "length": 1,
+      "number": 15,
+      "offset": 121,
+      "prefix": [
+        0,
+        9,
+        12,
+        15,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "3af9155e6a0f506eace93a8f1383306f23c8231aabac2ce2f64f150f73c327ee"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf16PilotV97.lean",
+      "file_sha256": "b42a7f8d3d163ddb716caf75e8e7c65600c13e9dc20e56a7f1e3a79d348096ab",
+      "indices": [
+        15,
+        118,
+        107,
+        83,
+        63
+      ],
+      "length": 4,
+      "number": 16,
+      "offset": 126,
+      "prefix": [
+        0,
+        6
+      ],
+      "size": 5,
+      "targets_sha256": "2f2850761b1ed51abd3c3073cc690328b613e986a9b13f2eeadf83fb4c7c0b0c"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf17PilotV97.lean",
+      "file_sha256": "5b1ed58a8f42a38e9e5e59fcfad98b8123474cc7f8877345518b5555606d73e6",
+      "indices": [
+        106,
+        249,
+        308,
+        248,
+        319,
+        293,
+        233,
+        267,
+        213,
+        149
+      ],
+      "length": 3,
+      "number": 17,
+      "offset": 131,
+      "prefix": [
+        0,
+        6,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "8a0377ab49d01afcbfe7938700cc89a17832b63883d4a709cd4f29f25a7e7ba5"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf18PilotV97.lean",
+      "file_sha256": "2a816a01472aef7c27324ddfd206b5cf808a36a36214a010c5680768d90dd191",
+      "indices": [
+        82,
+        307,
+        382,
+        232,
+        292,
+        420,
+        439,
+        454,
+        419,
+        291
+      ],
+      "length": 3,
+      "number": 18,
+      "offset": 141,
+      "prefix": [
+        0,
+        6,
+        15
+      ],
+      "size": 10,
+      "targets_sha256": "71269ff853f11dbd4f1259f47fc85480ba3f35713a15009e91c2c39077ca12b8"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf19PilotV97.lean",
+      "file_sha256": "d005ea1393c52d1c47166ca9a7df017f04b621e88c19cccae150180b8221760b",
+      "indices": [
+        266,
+        453,
+        430,
+        444,
+        408,
+        394,
+        355,
+        368,
+        290,
+        148
+      ],
+      "length": 2,
+      "number": 19,
+      "offset": 151,
+      "prefix": [
+        0,
+        6,
+        15,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "3bd69487656c3293d820c38fef2a7137f1ca42585ecd73479fdd08d5131c0665"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf20PilotV97.lean",
+      "file_sha256": "fbc7f462e38d5a58441dbcfd53bd941cb6370b89fd31ab517946cfaf65a895a4",
+      "indices": [
+        62,
+        247,
+        231,
+        212,
+        230,
+        438,
+        418,
+        429,
+        407,
+        367
+      ],
+      "length": 3,
+      "number": 20,
+      "offset": 161,
+      "prefix": [
+        0,
+        6,
+        12
+      ],
+      "size": 10,
+      "targets_sha256": "eb65900f01c86bd8b504767b8ae3cac662edd9a75c532ad4d273db8377704791"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf21PilotV97.lean",
+      "file_sha256": "c39b24c1b822a5536fe9c7e4d5715b13d66e24e67bcb783c3de6f0b54d93e385",
+      "indices": [
+        211,
+        417,
+        406,
+        405,
+        461,
+        404,
+        366,
+        403,
+        416,
+        210
+      ],
+      "length": 2,
+      "number": 21,
+      "offset": 171,
+      "prefix": [
+        0,
+        6,
+        12,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "0edfe0d2b49992b5fd3177ccc70fdf3f6d1f6c672df9b46162ba9756fbf59d64"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf22PilotV97.lean",
+      "file_sha256": "3b6b89696421b8c21aa3c7c1d56370ea2f696d0d77790fc33ed467eb2f48cd7d",
+      "indices": [
+        147,
+        289,
+        365,
+        393,
+        402,
+        428,
+        288,
+        415,
+        437,
+        229
+      ],
+      "length": 2,
+      "number": 22,
+      "offset": 181,
+      "prefix": [
+        0,
+        6,
+        12,
+        15
+      ],
+      "size": 10,
+      "targets_sha256": "9cd22b69e252541136dc6b9a772821fbfc1ee7d2cc097f26023961bf221df34e"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf23PilotV97.lean",
+      "file_sha256": "1bf8c43bdaedb1c9635722980f08c425a68040bfc3868793a18dea52fa1ba988",
+      "indices": [
+        146,
+        209,
+        228,
+        246,
+        61
+      ],
+      "length": 1,
+      "number": 23,
+      "offset": 191,
+      "prefix": [
+        0,
+        6,
+        12,
+        15,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "cc5773627db75f18699924ddd9ecc69fbe141d9a2a255514a3da1c19efe60bc4"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf24PilotV97.lean",
+      "file_sha256": "b24ca5970695120ec78cb46a958edefc52acb5cb68b8005ee8dcee3a4149d612",
+      "indices": [
+        35,
+        105,
+        163,
+        145,
+        199,
+        227,
+        287,
+        337,
+        364,
+        354
+      ],
+      "length": 3,
+      "number": 24,
+      "offset": 196,
+      "prefix": [
+        0,
+        6,
+        9
+      ],
+      "size": 10,
+      "targets_sha256": "825be4632258103d458eac485c80df2f26d3524eab9ffa88d5279d7e010e3820"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf25PilotV97.lean",
+      "file_sha256": "5f52c085bd2fbc60f14484223a99b78702724d8624f9e3d977aea443b2271288",
+      "indices": [
+        187,
+        381,
+        392,
+        391,
+        401,
+        443,
+        336,
+        427,
+        452,
+        265
+      ],
+      "length": 2,
+      "number": 25,
+      "offset": 206,
+      "prefix": [
+        0,
+        6,
+        9,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "543ca0bac108994900b9a045b4b220222e4a9acb150566c57c521b05b40e5dc7"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf26PilotV97.lean",
+      "file_sha256": "8a3db4adaacd77b511907c1138846f240b17a5909e6e0ae49a35a0c19d46c015",
+      "indices": [
+        81,
+        306,
+        286,
+        380,
+        414,
+        451,
+        226,
+        436,
+        413,
+        285
+      ],
+      "length": 2,
+      "number": 26,
+      "offset": 216,
+      "prefix": [
+        0,
+        6,
+        9,
+        15
+      ],
+      "size": 10,
+      "targets_sha256": "61cef184bd61f085df22be3fa776b4b69397c5326e946f4f713c9428f90d699f"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf27PilotV97.lean",
+      "file_sha256": "46758f1edebc5950cd7f064e5e71f36813fb7b02e272d363a5a725b075999f6f",
+      "indices": [
+        162,
+        225,
+        379,
+        305,
+        80
+      ],
+      "length": 1,
+      "number": 27,
+      "offset": 226,
+      "prefix": [
+        0,
+        6,
+        9,
+        15,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "a447f79a3b28e3e3c891acd0107e68b0dbf669a339b04e35e148fd269e76d95c"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf28PilotV97.lean",
+      "file_sha256": "ebd245a5707b95d925968c1002efbe0c7ab7fcfd5063bb3b344b4b1d43127b83",
+      "indices": [
+        50,
+        79,
+        144,
+        186,
+        208,
+        264,
+        198,
+        224,
+        284,
+        318
+      ],
+      "length": 2,
+      "number": 28,
+      "offset": 231,
+      "prefix": [
+        0,
+        6,
+        9,
+        12
+      ],
+      "size": 10,
+      "targets_sha256": "c22d4c8c4076faa95d7ee094d334c61bbfde6e7132fc75636d21cea2f391959e"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf29PilotV97.lean",
+      "file_sha256": "2c1faac9fd0b1ebff88eb000fd8a090752c29f88d622df73818a03efe27aa4c9",
+      "indices": [
+        104,
+        245,
+        304,
+        244,
+        103
+      ],
+      "length": 1,
+      "number": 29,
+      "offset": 241,
+      "prefix": [
+        0,
+        6,
+        9,
+        12,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "187ea821369f03aa2f45d4d03fd905cc9e59c500e419525bbca9f3c17c041101"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf30PilotV97.lean",
+      "file_sha256": "087725ba0d0a77f652515222c55a3f57685a0383086ea3d8379d436fbab128fe",
+      "indices": [
+        34,
+        60,
+        78,
+        102,
+        117
+      ],
+      "length": 1,
+      "number": 30,
+      "offset": 246,
+      "prefix": [
+        0,
+        6,
+        9,
+        12,
+        15
+      ],
+      "size": 5,
+      "targets_sha256": "e145cd83afdbdfb84fb2297ec23b4e51dfb8c1c03878cc58f6e1f44535382ae2"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf31PilotV97.lean",
+      "file_sha256": "19548f041a53fe2bb12a11d96dd9aa033fb12bbc50664d3492ef9ba82402b7ba",
+      "indices": [
+        14
+      ],
+      "length": 0,
+      "number": 31,
+      "offset": 251,
+      "prefix": [
+        0,
+        6,
+        9,
+        12,
+        15,
+        18
+      ],
+      "size": 1,
+      "targets_sha256": "0f02a9d549155344036d41dee01d3d0a076aae614ba2ef9261863111461d9692"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf32PilotV97.lean",
+      "file_sha256": "02ea7bef5be06b84651e94f337c6ed696960016778d3b5997257317411e64392",
+      "indices": [
+        4,
+        13,
+        33,
+        49,
+        32
+      ],
+      "length": 4,
+      "number": 32,
+      "offset": 252,
+      "prefix": [
+        0,
+        3
+      ],
+      "size": 5,
+      "targets_sha256": "009a14ce274a0cf51c0a718b532c4722bf1a90867d046362a888663ae866f70d"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf33PilotV97.lean",
+      "file_sha256": "02fafa53f0360ed2236d0beb6344e8e7729644e69ef503cd82a28d9c0ea33ce2",
+      "indices": [
+        31,
+        59,
+        77,
+        101,
+        127,
+        143,
+        161,
+        175,
+        142,
+        126
+      ],
+      "length": 3,
+      "number": 33,
+      "offset": 257,
+      "prefix": [
+        0,
+        3,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "28eb40ace1eba8d2a838968cf4b03cbbb73add7745002bd79ffa595576b72792"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf34PilotV97.lean",
+      "file_sha256": "553f87a0f693f0afc52dd2e7425dbce127d568a1d834f6d16a75ad5749085fff",
+      "indices": [
+        48,
+        76,
+        185,
+        197,
+        141,
+        207,
+        223,
+        263,
+        283,
+        317
+      ],
+      "length": 3,
+      "number": 34,
+      "offset": 267,
+      "prefix": [
+        0,
+        3,
+        15
+      ],
+      "size": 10,
+      "targets_sha256": "82479c5f9625642ea83dc961cc2efdef13f83273566f63fc8183a1fd8a9ccef3"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf35PilotV97.lean",
+      "file_sha256": "0dc8798559250a010a8c89b662f59c3b01a7ef9d936bfe112082e068edfab412",
+      "indices": [
+        174,
+        262,
+        335,
+        353,
+        363,
+        334,
+        373,
+        352,
+        261,
+        173
+      ],
+      "length": 2,
+      "number": 35,
+      "offset": 277,
+      "prefix": [
+        0,
+        3,
+        15,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "cc5d59ec80c0ec37104c6c549af80226bf1710c334dd5cb9043672e88ed590db"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf36PilotV97.lean",
+      "file_sha256": "2ff4c330bed55c82dce53f5b5b4d56567d2047245df61356b0f1d0d2ba0e44b8",
+      "indices": [
+        30,
+        100,
+        196,
+        184,
+        160,
+        222,
+        378,
+        333,
+        390,
+        332
+      ],
+      "length": 3,
+      "number": 36,
+      "offset": 287,
+      "prefix": [
+        0,
+        3,
+        12
+      ],
+      "size": 10,
+      "targets_sha256": "83bc470e79f1930e36cb19c0810c1a671f3150bb5aace36514f92b27d36ac26d"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf37PilotV97.lean",
+      "file_sha256": "0f54355143698f9a437cb66a1de8247a2fad03d5858a73c538d6d2e3a355f71b",
+      "indices": [
+        140,
+        282,
+        389,
+        362,
+        400,
+        426,
+        351,
+        442,
+        450,
+        260
+      ],
+      "length": 2,
+      "number": 37,
+      "offset": 297,
+      "prefix": [
+        0,
+        3,
+        12,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "259882dd13b1d745a8353ca4d64e6bc973464c012419df2d5fcb073edb6c527a"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf38PilotV97.lean",
+      "file_sha256": "dec9197146ce475fdb320fe33908fb596b44deb5274f63e17df4ee8d5b6bcf37",
+      "indices": [
+        125,
+        316,
+        331,
+        330,
+        425,
+        459,
+        259,
+        449,
+        424,
+        329
+      ],
+      "length": 2,
+      "number": 38,
+      "offset": 307,
+      "prefix": [
+        0,
+        3,
+        12,
+        15
+      ],
+      "size": 10,
+      "targets_sha256": "e8a84eb62a6e1bfef44e3534d0dc5f9170030fa7bd6607983eecf50c5925c1bd"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf39PilotV97.lean",
+      "file_sha256": "a660b418ef56c9c9d4d5951c61330c33a5483061846bc2a895ed043ab86326d6",
+      "indices": [
+        172,
+        258,
+        328,
+        315,
+        124
+      ],
+      "length": 1,
+      "number": 39,
+      "offset": 317,
+      "prefix": [
+        0,
+        3,
+        12,
+        15,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "f636ad19ec1b6cce8686a1240cccaac5ee18e2df047dc4b5e09271702d3370d3"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf40PilotV97.lean",
+      "file_sha256": "7b6a54082b8de711c461150903c40ce268bec97cf8e5f316aa0e78fabe81a5fc",
+      "indices": [
+        12,
+        116,
+        99,
+        75,
+        98,
+        243,
+        303,
+        314,
+        281,
+        257
+      ],
+      "length": 3,
+      "number": 40,
+      "offset": 322,
+      "prefix": [
+        0,
+        3,
+        9
+      ],
+      "size": 10,
+      "targets_sha256": "302f73163c0fbea395421b187105fedd07450ed0558cf2bcbe3277f47df64b29"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf41PilotV97.lean",
+      "file_sha256": "04c00ea0bcbe01d3772c7ffa49e4f1bc6c2af6a7b0059be122fab5efef18bffa",
+      "indices": [
+        74,
+        302,
+        377,
+        280,
+        412,
+        448,
+        256,
+        447,
+        441,
+        350
+      ],
+      "length": 2,
+      "number": 41,
+      "offset": 332,
+      "prefix": [
+        0,
+        3,
+        9,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "292553af24372f981062eb090726186ed590ca8e7695f3ec261df35a9c908ee5"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf42PilotV97.lean",
+      "file_sha256": "b0df22c156de7b5f25dbb178d1e1af54cec9e0cd290fa5ee6f51081866ba342f",
+      "indices": [
+        58,
+        242,
+        221,
+        220,
+        435,
+        423,
+        206,
+        411,
+        399,
+        361
+      ],
+      "length": 2,
+      "number": 42,
+      "offset": 342,
+      "prefix": [
+        0,
+        3,
+        9,
+        15
+      ],
+      "size": 10,
+      "targets_sha256": "c1ae235601579af2c9493f896eb4a1f2bb5931a7ecbeae92e9aaf4ed696dddd1"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf43PilotV97.lean",
+      "file_sha256": "519161f7b5df8d07bf3f8f4dafc4e2ee5912178e643af30ced6a412613c202bb",
+      "indices": [
+        139,
+        279,
+        388,
+        278,
+        138
+      ],
+      "length": 1,
+      "number": 43,
+      "offset": 352,
+      "prefix": [
+        0,
+        3,
+        9,
+        15,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "3a508d3b68067047d60ef6c37f4e4c7bf0baf1733608e131a11216874e226fc5"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf44PilotV97.lean",
+      "file_sha256": "7458d1813b9694fd4fe76ffdf002ac7356b85a60a654ebedbf61a13cfb2dc256",
+      "indices": [
+        29,
+        97,
+        159,
+        195,
+        219,
+        327,
+        183,
+        376,
+        387,
+        326
+      ],
+      "length": 2,
+      "number": 44,
+      "offset": 357,
+      "prefix": [
+        0,
+        3,
+        9,
+        12
+      ],
+      "size": 10,
+      "targets_sha256": "8ee459cab4ebeb097e831e045e16952c4964ae0f4f26bd59fbf2d3fad3e86890"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf45PilotV97.lean",
+      "file_sha256": "90d090e6701799dadfee116237b6764d644b2e2775374e71b2fa76d7c544bec8",
+      "indices": [
+        73,
+        301,
+        375,
+        218,
+        158
+      ],
+      "length": 1,
+      "number": 45,
+      "offset": 367,
+      "prefix": [
+        0,
+        3,
+        9,
+        12,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "5113756d0b1f335307edbcb82ced6c3a627b52e6d311ab6b5c3224c132c419d6"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf46PilotV97.lean",
+      "file_sha256": "5f2e76a58d24fd512af65ace5fef57f33de6405827407d2a462f2f9ff29d3136",
+      "indices": [
+        47,
+        72,
+        182,
+        194,
+        96
+      ],
+      "length": 1,
+      "number": 46,
+      "offset": 372,
+      "prefix": [
+        0,
+        3,
+        9,
+        12,
+        15
+      ],
+      "size": 5,
+      "targets_sha256": "2b1edb7e942103f498209b082dff7301c08dc7270c5128fb52a1e6851f67d72d"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf47PilotV97.lean",
+      "file_sha256": "4d62783b3afb41730b621196ee12618bd6c0dffafb5a7c2be82e68b19c567c27",
+      "indices": [
+        28
+      ],
+      "length": 0,
+      "number": 47,
+      "offset": 377,
+      "prefix": [
+        0,
+        3,
+        9,
+        12,
+        15,
+        18
+      ],
+      "size": 1,
+      "targets_sha256": "99fc44945506589194221002f49ae8ddabc9c686c53fe0c0323e70d299b38485"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf48PilotV97.lean",
+      "file_sha256": "5d2f00ab3be3f50ce2467b62b523d0e5c79e09638105ab4b88f56a983a82ad3c",
+      "indices": [
+        3,
+        11,
+        27,
+        46,
+        26,
+        57,
+        71,
+        123,
+        137,
+        171
+      ],
+      "length": 3,
+      "number": 48,
+      "offset": 378,
+      "prefix": [
+        0,
+        3,
+        6
+      ],
+      "size": 10,
+      "targets_sha256": "6f829c9c1bc137678a7023061ade3596bfc30fff98a7161edcfc24a4543f3974"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf49PilotV97.lean",
+      "file_sha256": "09b35ad09d055e64a4a5ef702db9544977474aaf1d71771d5522c9d10f328f5a",
+      "indices": [
+        45,
+        70,
+        181,
+        136,
+        205,
+        255,
+        170,
+        254,
+        349,
+        372
+      ],
+      "length": 2,
+      "number": 49,
+      "offset": 388,
+      "prefix": [
+        0,
+        3,
+        6,
+        18
+      ],
+      "size": 10,
+      "targets_sha256": "e8eb7991064e62e24245d315d85eff411616bbf753d1dedc7913ec3bde2c0782"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf50PilotV97.lean",
+      "file_sha256": "c8c323912fbf7ee5da47b9c9d74241e0f7a664d56c24cc3d715be60815e759c1",
+      "indices": [
+        25,
+        95,
+        193,
+        157,
+        217,
+        325,
+        135,
+        277,
+        360,
+        348
+      ],
+      "length": 2,
+      "number": 50,
+      "offset": 398,
+      "prefix": [
+        0,
+        3,
+        6,
+        15
+      ],
+      "size": 10,
+      "targets_sha256": "79215b2f94f785f747962224a82965bc86874cfac033fa0033509f2fed952454"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf51PilotV97.lean",
+      "file_sha256": "5e77d0a28802c6dd270b89fdd95cda82f80039d72a724317015b9c0824d01480",
+      "indices": [
+        122,
+        313,
+        324,
+        253,
+        169
+      ],
+      "length": 1,
+      "number": 51,
+      "offset": 408,
+      "prefix": [
+        0,
+        3,
+        6,
+        15,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "120f4f36a6976e339d7be79abfcc826b788d9a6e2ae8e93072728f6e0a804ce9"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf52PilotV97.lean",
+      "file_sha256": "e424d90fa16cec37c5329cc2fb628563d5da94a4783e7f717a2894fbb1a43614",
+      "indices": [
+        10,
+        115,
+        94,
+        93,
+        241,
+        312,
+        69,
+        300,
+        276,
+        252
+      ],
+      "length": 2,
+      "number": 52,
+      "offset": 413,
+      "prefix": [
+        0,
+        3,
+        6,
+        12
+      ],
+      "size": 10,
+      "targets_sha256": "739efd05c64b011acde3d2dc2dbf1a2c29d651b06d6f280e9cddfa6e2ee2622e"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf53PilotV97.lean",
+      "file_sha256": "87b592c8e1d20184559003396b3cdcaf641f1a8822be9fa60a03f8cf3619ab71",
+      "indices": [
+        56,
+        240,
+        216,
+        204,
+        134
+      ],
+      "length": 1,
+      "number": 53,
+      "offset": 423,
+      "prefix": [
+        0,
+        3,
+        6,
+        12,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "28debc82d802dc9118145a0867478211d024939a58adeee5ea941b2aa44cfc2a"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf54PilotV97.lean",
+      "file_sha256": "d6fc4ba0e34758a406b40284c2df859295e76277b4a4460ca9048184368f0484",
+      "indices": [
+        24,
+        92,
+        192,
+        180,
+        68
+      ],
+      "length": 1,
+      "number": 54,
+      "offset": 428,
+      "prefix": [
+        0,
+        3,
+        6,
+        12,
+        15
+      ],
+      "size": 5,
+      "targets_sha256": "f5dc411c955a3157898a1aff3d7be50f64ef3d2e359b7a351fe253e4986cf78e"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf55PilotV97.lean",
+      "file_sha256": "9a0892c78f5175f12b3aab5cc536e28fc47fdc9383c8567b34e1e86f54e72b7f",
+      "indices": [
+        44
+      ],
+      "length": 0,
+      "number": 55,
+      "offset": 433,
+      "prefix": [
+        0,
+        3,
+        6,
+        12,
+        15,
+        18
+      ],
+      "size": 1,
+      "targets_sha256": "682648fcaa8de3f0b80ac9fe0e9e82335605192ffd2e8dd80c6335296368e7ac"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf56PilotV97.lean",
+      "file_sha256": "e71f41b91446083439610bc58bf3d57b14c83bc23f11783b1af811fa41d78f09",
+      "indices": [
+        2,
+        9,
+        23,
+        22,
+        55,
+        121,
+        43,
+        67,
+        133,
+        168
+      ],
+      "length": 2,
+      "number": 56,
+      "offset": 434,
+      "prefix": [
+        0,
+        3,
+        6,
+        9
+      ],
+      "size": 10,
+      "targets_sha256": "634540ed2348a8624a798dfa9cf458560567ae28ac7f25c2bb2a7c2020a2aea0"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf57PilotV97.lean",
+      "file_sha256": "65446b2aaef2699c03753d4bf529689cb070d0e077a2b65b8621dd09125ea28f",
+      "indices": [
+        21,
+        91,
+        156,
+        132,
+        120
+      ],
+      "length": 1,
+      "number": 57,
+      "offset": 444,
+      "prefix": [
+        0,
+        3,
+        6,
+        9,
+        18
+      ],
+      "size": 5,
+      "targets_sha256": "9d330dfbe94c81965d7fa333d43c2bd3637c2d52b9e649f50fe0a6e3e40ce3a1"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf58PilotV97.lean",
+      "file_sha256": "2600127baf0d506a992a74fc0d8b2a3fe91f731275e7cc188522acadad7aba53",
+      "indices": [
+        8,
+        114,
+        90,
+        66,
+        54
+      ],
+      "length": 1,
+      "number": 58,
+      "offset": 449,
+      "prefix": [
+        0,
+        3,
+        6,
+        9,
+        15
+      ],
+      "size": 5,
+      "targets_sha256": "fc6160d4a6fada0a78d8502aea7a032fe4930f79ba7d54cbed03c7d718f13b6b"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf59PilotV97.lean",
+      "file_sha256": "b7bfaba23d8d2039d5a2a8538827ed24b106def2af8c13f7702e379fdcc9983e",
+      "indices": [
+        20
+      ],
+      "length": 0,
+      "number": 59,
+      "offset": 454,
+      "prefix": [
+        0,
+        3,
+        6,
+        9,
+        15,
+        18
+      ],
+      "size": 1,
+      "targets_sha256": "4bc802d766dcb8a3bcdd706e35202d5ff3dbe5afc0f8adf5091b858b8cd68755"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf60PilotV97.lean",
+      "file_sha256": "08e75c51c460c5534b5fec1648360976680af6aeb9631f0b76d1b2d5c7761ce7",
+      "indices": [
+        1,
+        7,
+        19,
+        42,
+        18
+      ],
+      "length": 1,
+      "number": 60,
+      "offset": 455,
+      "prefix": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "size": 5,
+      "targets_sha256": "a0d9f60df31100a9eefee922dae6a028ec6da732afea8f218f48d59c8df8274c"
+    },
+    {
+      "domain": [
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf61PilotV97.lean",
+      "file_sha256": "95db6cdaaa0b21d0fe7e5fcd523d5912ac8abf191f56b290e5b9f15c91286b68",
+      "indices": [
+        6
+      ],
+      "length": 0,
+      "number": 61,
+      "offset": 460,
+      "prefix": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        18
+      ],
+      "size": 1,
+      "targets_sha256": "c8d2dc747c7a1b7da1b4ef4cddc0a21648923addb33abe60d71414329d2aae9e"
+    },
+    {
+      "domain": [
+        18,
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "file": "Fuglede/Z180K30ExceptionalProjectiveProfileD3VCombLeaf62PilotV97.lean",
+      "file_sha256": "dfe016c51d5e111a1ea47aec6fa98d1993bd6d1e9bb672b3374d612f31c1ae5f",
+      "indices": [
+        0
+      ],
+      "length": 0,
+      "number": 62,
+      "offset": 461,
+      "prefix": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15
+      ],
+      "size": 1,
+      "targets_sha256": "50327593185711d08983d37e12346e11c67a13e71b40d8f768cee4fa6df2a6b9"
+    }
+  ],
+  "schema": "z180-k30-d3v-comb-bridge-v97/1"
+}
