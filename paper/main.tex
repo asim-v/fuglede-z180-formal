@@ -9,13 +9,14 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{listings}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,fit}
 \usepackage{fancyhdr}
-\usepackage{balance}
+\usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
 
 \definecolor{ink}{HTML}{152238}
@@ -44,6 +45,10 @@
 \setlength{\parskip}{0pt}
 \setlist{nosep,leftmargin=*}
 \raggedbottom
+\titleformat{\section}{\color{ink}\Large\bfseries}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.65em}{}
+\titlespacing*{\section}{0pt}{1.5ex plus 0.4ex minus 0.2ex}{0.7ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 0.3ex minus 0.2ex}{0.5ex}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -104,7 +109,8 @@
   \begin{minipage}{0.94\textwidth}
   \small
   \textbf{Abstract.}
-  We give a machine-checked proof of the spectral-to-tiling implication for
+  This article presents a machine-checked proof of the spectral-to-tiling
+  implication for
   the cyclic group $\Z/180\Z$.  Spectrality is expressed exactly: the mask
   polynomial of a finite set is required to have the cyclotomic divisors
   corresponding to all nonzero differences in a proposed spectrum.  The
@@ -114,7 +120,8 @@
   profile cells through an ordered-difference histogram identity; $16{,}574$
   pairs are refuted by an integer scalar coefficient and the remaining $222$
   are connected to explicit catalogue witnesses.  A separate common-frame
-  argument handles the coupled five-Gram data.  These certificates are joined
+  argument handles the coupled five-row Gram data.  These certificates are
+  joined
   to the global cardinality reduction in Lean~4.  The final theorem and its
   principal intermediate endpoints replay successfully with
   \texttt{leanchecker}; their printed dependencies are only
@@ -134,15 +141,23 @@ Fuglede's conjecture relates two rigid structures: a set that admits an
 orthogonal basis of characters and a set that tiles its ambient group by
 translations.  In Euclidean spaces the unrestricted conjecture is false in
 high dimension, while important finite and one-dimensional cases retain a
-  rich arithmetic structure~\cite{Fuglede1974,Tao2004,DutkayLai2014}.  Finite
-  cyclic groups are especially useful because Fourier vanishing can be encoded
-  by divisibility of integer mask polynomials by cyclotomic
-  polynomials~\cite{CovenMeyerowitz1999}.  This
+rich arithmetic structure~\cite{Fuglede1974,Tao2004,DutkayLai2014}.  Finite
+cyclic groups are especially useful because Fourier vanishing can be encoded
+by divisibility of integer mask polynomials by cyclotomic
+polynomials~\cite{CovenMeyerowitz1999}.  This
 turns analytic orthogonality into an exact, checkable statement about
-polynomials and roots of unity~\cite{LamLeung2000,Shi2019,Zhang2022}.
+polynomials and roots of unity~\cite{LamLeung2000,Malikiosis2022}.
 
-This article reports a complete formal proof of one such finite statement for
-$G=\Zmod{180}$.  The modulus
+Among the established cyclic families are groups of order $p^nq$, $pqr$,
+$p^2qr$, and $pqrs$~\cite{MalikiosisKolountzakis2017,Shi2019,Somlai2023,
+KissMalikiosisSomlaiVizer2022}; group-ring methods also treat
+$p^nqr$~\cite{Zhang2022}.  These results provide the closest arithmetic
+context for the present theorem.  The modulus $180=2^2\cdot3^2\cdot5$ lies
+outside those one-repeated-prime and square-free families because two
+distinct prime factors occur with exponent two.
+
+This article reports a complete formal proof of the spectral-to-tiling
+direction for $G=\Zmod{180}$.  The modulus
 \[
 180=2^2\cdot 3^2\cdot 5
 \]
@@ -202,6 +217,26 @@ $\ell_1,\ell_2\in L$,
 \]
 \end{definition}
 
+This predicate is not a substitute for the usual analytic definition.  Let
+$\chi_N$ be the standard injective additive character of $\Zmod N$ and define
+the unnormalised Fourier coefficient
+\[
+  \widehat{\mathbf 1_A}(d)=\sum_{a\in A}\chi_N(ad).
+\]
+The formalization proves the exact equivalence
+\begin{equation}\label{eq:fourier-bridge}
+  \Phi_{\operatorname{ord}_N(d)}\mid \mask
+  \quad\Longleftrightarrow\quad
+  \widehat{\mathbf 1_A}(d)=0.
+\end{equation}
+It follows that \texttt{CyclotomicSpectrum} is equivalent to the ordinary
+pairwise Fourier-orthogonality condition.  Because $|A|=|L|$ and
+$A\ne\varnothing$, the Fourier evaluation matrix is square with nonzero,
+orthogonal columns; its characters therefore form an orthogonal basis on
+$A$.  Lean also proves the dual spectrum statement by converting column
+orthogonality into row orthogonality.  Thus Theorem~\ref{thm:main} assumes the
+standard finite notion of spectrality, expressed in an exact algebraic form.
+
 The tiling predicate is deliberately independent of Fourier analysis.
 For finite sets $A,B\subseteq G$, let
 \[
@@ -217,7 +252,7 @@ Lean defines
 Thus the conclusion includes both existence and uniqueness of each
 representation.  In particular, it implies $|A||B|=|G|$.
 
-The exact Lean endpoint is short enough to display in full.
+The public Lean endpoint is short enough to display in full.
 
 \begin{lstlisting}
 theorem z180_exists_tiling_of_spectral_v96
@@ -274,8 +309,17 @@ independent finite certificates joined only at catalogue assembly.}
 
 The surrounding library converts the spectrum hypothesis into exact
 cyclotomic zero data, applies cardinality and divisor sieves, and closes the
-nonexceptional branches.  The master conditional theorem then asks only for a
-closure at cardinality $30$.  The module
+nonexceptional branches.  Sets of size greater than $90$ are handled by the
+upper-half reduction.  At size at most $90$, projection to complementary
+factors restricts the cardinality to a divisor of $180$ or to
+\[
+  7,8,11,13,14,16,17,19,21,24,27,33.
+\]
+Kernel-checked nondivisor arguments eliminate all entries in this list except
+the intermediate $24$ and $33$ branches.  The divisor reduction and subsequent
+closures discharge the residual sizes $6,10,12,18$; separate arguments close
+$33$ and exclude $24$.  The master conditional theorem consequently asks
+only for a closure at cardinality $30$.  The module
 \texttt{Z180K30CatalogueMasterClosureV81} packages this interface:
 a complete exceptional catalogue implies the spectral-to-tiling theorem for
 all cardinalities.
@@ -306,8 +350,8 @@ $ab=ba$ proves
 \]
 This symmetry removes a duplicated orientation from the finite audit.
 
-For a supported divisor $d\in\{3,4,6\}$, every projective-side difference is
-a multiple of $d$.  The $U$-profile stores the responses
+For a supported divisor $d\in\{3,4,6\}$, every difference on the normalized
+$V$-side is a multiple of $d$.  The $U$-profile stores the responses
 \[
   K_{d,U}(t)=\sum_{a\in\Delta(U)}\zeta_0(at),
   \qquad 0\le t<36,
@@ -328,7 +372,7 @@ The normalized literal universe contains $16{,}796$ distinct pairs.  Grouping
 by the two exact profiles produces the much smaller table in
 Table~\ref{tab:census}.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Authenticated projective-profile census.}
 \label{tab:census}
@@ -455,7 +499,8 @@ Theorem~\ref{thm:main} is intentionally precise.
 \begin{itemize}
   \item It proves the spectral-to-tiling direction for $\Zmod{180}$.
   \item Spectrality is the exact cyclotomic predicate displayed in
-    Section~2; the proof does not assume approximate Fourier vanishing.
+    Section~2, and Equation~\eqref{eq:fourier-bridge} identifies it with the
+    usual finite Fourier definition; no approximate vanishing is assumed.
   \item The conclusion is a translational tiling with unique
     representations.
   \item The theorem does not assert the converse, a result for arbitrary
@@ -490,8 +535,10 @@ large finite harmonic-analysis arguments into kernel-checked mathematics.
 The formalization uses Lean and the mathlib library.  The author thanks the
 developers and maintainers of these open-source projects.
 
-\balance
+\begingroup
+\footnotesize
 \bibliographystyle{abbrv}
 \bibliography{references}
+\endgroup
 
 \end{document}

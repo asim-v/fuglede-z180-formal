@@ -7,7 +7,7 @@ authors:
     given-names: "Javier Emilio"
     email: "bazan@ciencias.unam.mx"
     affiliation: "Facultad de Ciencias, Universidad Nacional Autónoma de México (UNAM)"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-08-12
 repository-code: "https://github.com/asim-v/fuglede-z180-formal"
 license: MIT
@@ -18,4 +18,3 @@ keywords:
   - finite cyclic groups
   - Lean 4
   - formal verification
-

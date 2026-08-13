@@ -8,11 +8,23 @@ files that establish it.
 - [`Fuglede/CyclicCertificate.lean`](../fuglede_lean/Fuglede/CyclicCertificate.lean)
   defines the mask polynomial, cyclotomic Fourier-zero certificate, and
   `CyclotomicSpectrum`.
+- [`Fuglede/SpectralFourier.lean`](../fuglede_lean/Fuglede/SpectralFourier.lean)
+  proves that cyclotomic divisibility is equivalent to exact Fourier
+  vanishing, identifies `CyclotomicSpectrum` with the usual finite Fourier
+  spectrum condition, and proves spectral duality through the square Fourier
+  matrix.
 - [`Fuglede/FiniteTiling.lean`](../fuglede_lean/Fuglede/FiniteTiling.lean) defines
   `Tiles A B` as bijectivity of the addition map.
 
 ## Global reduction
 
+- [`Fuglede/Z180CardinalitySieve.lean`](../fuglede_lean/Fuglede/Z180CardinalitySieve.lean)
+  restricts lower-half spectral cardinalities to divisors of `180` or the
+  exact exceptional list `7, 8, 11, 13, 14, 16, 17, 19, 21, 24, 27, 33`.
+- [`Fuglede/Z180MasterReduction.lean`](../fuglede_lean/Fuglede/Z180MasterReduction.lean)
+  combines the upper-half theorem, divisor reduction, and nondivisor
+  exclusions. Later modules close sizes `6`, `10`, `12`, `18`, `24`, and
+  `33`, leaving exactly the K30 branch.
 - [`Fuglede/Z180MasterConditionalClosure.lean`](../fuglede_lean/Fuglede/Z180MasterConditionalClosure.lean)
   combines the completed cardinality branches and isolates the exceptional
   `|A| = 30` closure.

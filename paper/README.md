@@ -21,3 +21,6 @@ pdflatex main.tex
 
 The committed `main.pdf` is the rendered publication artifact.
 
+The bibliography is stored in `references.bib`. The article uses an
+impersonal single-author voice throughout; author and affiliation metadata are
+set near the beginning of `main.tex` and in `../CITATION.cff`.

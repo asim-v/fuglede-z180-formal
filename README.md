@@ -23,7 +23,10 @@ theorem z180_exists_tiling_of_spectral_v96
 
 Here `CyclotomicSpectrum` is an exact algebraic encoding of pairwise Fourier
 orthogonality by divisibility of the mask polynomial by the appropriate
-cyclotomic polynomial. `Tiles A B` means that the addition map
+cyclotomic polynomial. The development proves
+[`cyclotomicSpectrum_iff_fourierSpectrum`](fuglede_lean/Fuglede/SpectralFourier.lean),
+so this is equivalent to the usual finite Fourier definition rather than a
+weaker proxy. `Tiles A B` means that the addition map
 `A × B → ZMod 180` is bijective, so every group element has a unique
 representation `a + b`.
 
@@ -38,6 +41,11 @@ The checked proof has three final components:
 3. **V81/V96 closure.** The two finite certificates discharge the remaining
    `|A| = 30` catalogue hypothesis and connect it to the global cardinality
    reduction for `ZMod 180`.
+
+The global reduction itself includes the upper-half argument, an exact
+cardinality sieve, the divisor cases, the nondivisor exclusions, and the
+separate closures at sizes `6`, `10`, `12`, `18`, `24`, and `33`. The K30
+catalogue is the final branch, not the whole proof in isolation.
 
 ## Repository map
 
