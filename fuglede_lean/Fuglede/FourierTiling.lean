@@ -99,6 +99,43 @@ theorem sum_stdAddChar_mul (z : ZMod N) :
       if z = 0 then (N : ℂ) else 0 := by
   simpa using AddChar.sum_mulShift z (ZMod.isPrimitive_stdAddChar N)
 
+/-- A genuine tiling makes the product of the two mask Fourier coefficients
+vanish at every nonzero frequency.  This is the converse direction to the
+Fourier-zero-cover criterion proved below. -/
+theorem fourier_product_zero_of_tiles {A B : Finset (ZMod N)}
+    (hTiles : Tiles A B) {d : ZMod N} (hd : d ≠ 0) :
+    fourierSum A d * fourierSum B d = 0 := by
+  rw [fourierSum_mul_fourierSum]
+  let e : ↥(A ×ˢ B) ≃ ZMod N := Equiv.ofBijective (sumMap A B) hTiles
+  calc
+    (∑ p ∈ A ×ˢ B, ZMod.stdAddChar ((p.1 + p.2) * d)) =
+        ∑ p : ↥(A ×ˢ B), ZMod.stdAddChar ((p.1.1 + p.1.2) * d) := by
+      simpa only [Finset.univ_eq_attach] using
+        (Finset.sum_attach (A ×ˢ B)
+          (fun p ↦ ZMod.stdAddChar ((p.1 + p.2) * d))).symm
+    _ = ∑ g : ZMod N, ZMod.stdAddChar (g * d) := by
+      apply Fintype.sum_equiv e
+      intro p
+      rfl
+    _ = 0 := by
+      rw [sum_stdAddChar_mul]
+      exact if_neg hd
+
+/-- Every nonzero frequency of a tiling is a zero of at least one of its two
+mask Fourier transforms. -/
+theorem fourier_zero_cover_of_tiles {A B : Finset (ZMod N)}
+    (hTiles : Tiles A B) (d : ZMod N) (hd : d ≠ 0) :
+    fourierSum A d = 0 ∨ fourierSum B d = 0 := by
+  exact mul_eq_zero.mp (fourier_product_zero_of_tiles hTiles hd)
+
+/-- Polynomial/cyclotomic form of `fourier_zero_cover_of_tiles`. -/
+theorem cyclotomic_zero_cover_of_tiles {A B : Finset (ZMod N)}
+    (hTiles : Tiles A B) (d : ZMod N) (hd : d ≠ 0) :
+    CyclotomicZero N A d ∨ CyclotomicZero N B d := by
+  rw [cyclotomicZero_iff_fourierSum_zero,
+    cyclotomicZero_iff_fourierSum_zero]
+  exact fourier_zero_cover_of_tiles hTiles d hd
+
 /-- Exact Fourier inversion identity for the number of representations of
 `g` as `a + b`. -/
 theorem sum_fourier_product_twist (A B : Finset (ZMod N)) (g : ZMod N) :
@@ -202,5 +239,44 @@ theorem tiles_of_cyclotomic_zero_cover
   rcases hcover d hd with hA | hB
   · exact Or.inl ((cyclotomicZero_iff_fourierSum_zero A d).1 hA)
   · exact Or.inr ((cyclotomicZero_iff_fourierSum_zero B d).1 hB)
+
+/-- Exact Fourier characterization of a tiling pair in a finite cyclic group. -/
+theorem tiles_iff_card_mul_eq_and_fourier_zero_cover
+    (A B : Finset (ZMod N)) :
+    Tiles A B ↔
+      A.card * B.card = N ∧
+        ∀ d : ZMod N, d ≠ 0 →
+          fourierSum A d = 0 ∨ fourierSum B d = 0 := by
+  constructor
+  · intro hTiles
+    refine ⟨?_, fourier_zero_cover_of_tiles hTiles⟩
+    simpa using card_mul_eq_card_of_tiles hTiles
+  · rintro ⟨hcard, hcover⟩
+    exact tiles_of_fourier_zero_cover A B hcard hcover
+
+/-- Exact cyclotomic-polynomial characterization of a tiling pair. -/
+theorem tiles_iff_card_mul_eq_and_cyclotomic_zero_cover
+    (A B : Finset (ZMod N)) :
+    Tiles A B ↔
+      A.card * B.card = N ∧
+        ∀ d : ZMod N, d ≠ 0 →
+          CyclotomicZero N A d ∨ CyclotomicZero N B d := by
+  constructor
+  · intro hTiles
+    refine ⟨?_, cyclotomic_zero_cover_of_tiles hTiles⟩
+    simpa using card_mul_eq_card_of_tiles hTiles
+  · rintro ⟨hcard, hcover⟩
+    exact tiles_of_cyclotomic_zero_cover A B hcard hcover
+
+/-- The size of either member of a tiling pair divides the modulus. -/
+theorem card_dvd_modulus_of_tiles_left {A B : Finset (ZMod N)}
+    (hTiles : Tiles A B) : A.card ∣ N := by
+  refine ⟨B.card, ?_⟩
+  simpa using (card_mul_eq_card_of_tiles hTiles).symm
+
+theorem card_dvd_modulus_of_tiles_right {A B : Finset (ZMod N)}
+    (hTiles : Tiles A B) : B.card ∣ N := by
+  refine ⟨A.card, ?_⟩
+  simpa [Nat.mul_comm] using (card_mul_eq_card_of_tiles hTiles).symm
 
 end Fuglede

@@ -52,6 +52,7 @@ import Fuglede.Z180K15Closure
 import Fuglede.Z180PrimePowerFibers
 import Fuglede.Z180ClosedCases
 import Fuglede.Z180DivisorReduction
+import Fuglede.Z180TilingSpectralReduction
 import Fuglede.Z180CardinalitySieve
 import Fuglede.Z180NondivisorK7Closure
 import Fuglede.Z180NondivisorK13Closure

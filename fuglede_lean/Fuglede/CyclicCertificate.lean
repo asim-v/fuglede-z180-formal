@@ -44,6 +44,15 @@ expressed entirely as a finite exact statement. -/
 def SpectralImpliesTileAt (N : ℕ) : Prop :=
   ∀ A L : Finset (ZMod N), CyclotomicSpectrum N A L → ∃ B, Tiles A B
 
+/-- The converse finite Fuglede direction: every translational tile admits
+an exact cyclotomic spectrum. -/
+def TileImpliesSpectralAt (N : ℕ) : Prop :=
+  ∀ A B : Finset (ZMod N), Tiles A B → ∃ L, CyclotomicSpectrum N A L
+
+/-- Both directions of finite Fuglede at a fixed cyclic modulus. -/
+def FugledeAt (N : ℕ) : Prop :=
+  SpectralImpliesTileAt N ∧ TileImpliesSpectralAt N
+
 /-- Our concrete target: the first square-free cyclic order with five primes. -/
 abbrev Fuglede2310 : Prop := SpectralImpliesTileAt 2310
 

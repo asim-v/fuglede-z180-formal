@@ -107,8 +107,19 @@ These are the standard classical/quotient axioms used throughout mathlib.
 ## Scope
 
 The theorem proves the **spectral-to-tiling** implication for the exact
-cyclotomic spectrum predicate on `ZMod 180`. It does not claim the converse,
-nor a theorem for arbitrary finite abelian groups or arbitrary moduli.
+cyclotomic spectrum predicate on `ZMod 180`. It does not yet claim the full
+converse, nor a theorem for arbitrary finite abelian groups or arbitrary
+moduli.
+
+Work on the converse is tracked in
+[`Z180TilingSpectralReduction.lean`](fuglede_lean/Fuglede/Z180TilingSpectralReduction.lean).
+The current kernel-checked foundation proves, for every cyclic modulus, that a
+tiling pair is equivalent to the correct cardinality identity together with an
+exact Fourier (equivalently cyclotomic) zero cover. At modulus `180` it also
+proves that tile cardinalities are positive divisors of `180`, closes the
+singleton and full-group spectral endpoints, and lists explicitly the sixteen
+remaining cardinalities. These are reductions toward tiling-to-spectrality,
+not a claim that the converse has already been completed.
 
 ## License and citation
 
