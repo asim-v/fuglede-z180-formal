@@ -1,9 +1,0 @@
-import Fuglede.Z180K6PhaseGeometry
-
-#print axioms Fuglede.unit_pair_sum_unit_ratios_primitive_six
-#print axioms Fuglede.unit_pair_sum_unit_ratios_ne
-#print axioms Fuglede.z180_stdAddChar_mul_thirty_eq_cast_six
-#print axioms Fuglede.z180_cast_six_eq_of_order_six_phase_eq
-#print axioms Fuglede.z180_cast_six_frequencyOrder_of_pair_phase_sum
-#print axioms Fuglede.zmod6_eq_one_or_neg_one_of_frequencyOrder_eq_six
-#print axioms Fuglede.z180_cast_six_pair_normal_form_of_phase_sum

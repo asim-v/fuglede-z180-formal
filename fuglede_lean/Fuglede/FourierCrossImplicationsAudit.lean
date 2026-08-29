@@ -1,7 +1,0 @@
-import Fuglede.FourierCrossImplications
-
-#print axioms Fuglede.supportEnergy_eq_zero_iff_fourierSum_fromCRT2310
-#print axioms Fuglede.supportEnergy_eq_zero_iff_cyclotomicZero_fromCRT2310
-#print axioms Fuglede.supportEnergy_eq_zero_of_cyclotomicZero_of_support
-#print axioms Fuglede.supportEnergy_L_eq_zero_of_innerDistribution_A_pos
-#print axioms Fuglede.supportEnergy_A_eq_zero_of_innerDistribution_L_pos

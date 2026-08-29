@@ -1,14 +1,14 @@
 cff-version: 1.2.0
-message: "If you use this formalization, please cite the accompanying article and this software release."
-title: "A kernel-checked spectral-to-tiling theorem for the cyclic group Z/180Z"
+message: "If you use this formalization, please cite this software release."
+title: "A kernel-checked proof of Fuglede's conjecture for the cyclic group Z/180Z"
 type: software
 authors:
   - family-names: "Bazán Sanchez"
     given-names: "Javier Emilio"
     email: "bazan@ciencias.unam.mx"
     affiliation: "Facultad de Ciencias, Universidad Nacional Autónoma de México (UNAM)"
-version: 1.0.1
-date-released: 2026-08-12
+version: 2.0.0
+date-released: 2026-08-28
 repository-code: "https://github.com/asim-v/fuglede-z180-formal"
 license: MIT
 keywords:

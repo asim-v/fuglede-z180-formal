@@ -1,4 +1,4 @@
--- Source: C:/Users/personal/Documents/Codex/2026-08-03/abre-https-vibemathed-com-y-encuentra/fuglede_search/z180_divisor_closure_evidence_20260808_v1/k12_phi2_phi4_both_sides.smt2
+-- Original provenance label: fuglede_search/z180_divisor_closure_evidence_20260808_v1/k12_phi2_phi4_both_sides.smt2 (not required for kernel replay).
 -- Source SHA-256: 2db36ed5b3aca533e8c118dfd48a92d739c66bb4e50d7f708ac53419b44c5e29
 -- DPLL report SHA-256: 5f406ffb80c0d3c65825e7585ffffcc36913e619bbd8478f053229f47f9ae055
 -- Deterministic cardinality-12 specialization and bounded subtree split.

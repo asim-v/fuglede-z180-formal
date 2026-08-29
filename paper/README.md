@@ -1,26 +1,27 @@
 # Building the article
 
-The article uses a standard two-column LaTeX layout.
+The article uses a clean two-column LaTeX layout and is written as a
+single-author paper.
 
-With Tectonic:
+On Windows:
 
-```bash
-cd paper
-tectonic main.tex --keep-logs
+```powershell
+.\paper\build.ps1
 ```
 
-With a conventional TeX distribution:
+The equivalent commands on any system with a conventional TeX distribution
+are:
 
 ```bash
 cd paper
-pdflatex main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
 bibtex main
-pdflatex main.tex
-pdflatex main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 The committed `main.pdf` is the rendered publication artifact.
 
 The bibliography is stored in `references.bib`. The article uses an
-impersonal single-author voice throughout; author and affiliation metadata are
-set near the beginning of `main.tex` and in `../CITATION.cff`.
+expository single-author voice; author and affiliation metadata are set near
+the beginning of `main.tex` and in `../CITATION.cff`.

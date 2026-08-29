@@ -1260,6 +1260,7 @@ def build_expected() -> tuple[dict[Path, str], dict]:
                 "fuglede_lean/Fuglede/"
                 "Z180K30ExceptionalProjectiveProfileDataV97D4.lean"
             ),
+            "fuglede_lean/Fuglede.lean",
             "scripts/generate_z180_k30_projective_profile_audit_v97.py",
             "scripts/z180_k30_projective_profile_audit_v97.manifest.json",
         },
@@ -1271,8 +1272,9 @@ def build_expected() -> tuple[dict[Path, str], dict]:
             REPO_DIR / "fuglede_lean",
             "z180-k30-d6-algebraic-v97/1",
             {
+                "Fuglede.lean",
                 "Fuglede/"
-                "Z180K30ExceptionalProjectiveProfileDataV97D6.lean"
+                "Z180K30ExceptionalProjectiveProfileDataV97D6.lean",
             },
             True,
         )
@@ -1455,6 +1457,20 @@ def build_expected() -> tuple[dict[Path, str], dict]:
     expected[LEAN_DIR / "Z180K30ExceptionalProjectiveProfileAggregateV97.lean"] = (
         aggregate_source()
     )
+
+    # Bucket and intermediate aggregate sources are derivable but dormant: the
+    # public artifact ships only generated modules reachable from the endpoint.
+    dormant_modules = [
+        "Fuglede.Z180K30ExceptionalProjectiveProfileD3PilotV97",
+        *all_completeness_bucket_modules,
+        *all_completeness_aggregate_modules,
+    ]
+    removed_dormant = sum(
+        expected.pop(source_for_module(module), None) is not None
+        for module in dormant_modules
+    )
+    if removed_dormant != len(dormant_modules):
+        raise SystemExit("FAIL CLOSED: dormant generated-module inventory drift")
 
     d3u_modules = [
         "Fuglede."
@@ -1700,6 +1716,7 @@ def build_expected() -> tuple[dict[Path, str], dict]:
         },
         "pilot": {
             "module": "Fuglede.Z180K30ExceptionalProjectiveProfileD3PilotV97",
+            "shippedInEndpointClosure": False,
             "compileAfter": [
                 "Fuglede.Z180K30ExceptionalProjectiveHistogramCoreV97",
                 "Fuglede.Z180K30ExceptionalProjectiveProfileCoreV97",

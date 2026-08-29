@@ -30,14 +30,14 @@
   linkcolor=accent,
   citecolor=accent,
   urlcolor=accent,
-  pdftitle={A Kernel-Checked Spectral-to-Tiling Theorem for the Cyclic Group Z/180Z},
+  pdftitle={A Kernel-Checked Proof of Fuglede's Conjecture for the Cyclic Group Z/180Z},
   pdfauthor={Javier Emilio Bazán Sanchez}
 }
 
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\footnotesize Bazán Sanchez}
-\fancyhead[R]{\footnotesize Spectral-to-tiling in $\mathbb Z/180\mathbb Z$}
+\fancyhead[R]{\footnotesize Fuglede's conjecture in $\mathbb Z/180\mathbb Z$}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.35pt}
 
@@ -95,7 +95,7 @@
 \begin{@twocolumnfalse}
   \begin{center}
     {\color{ink}\LARGE\bfseries
-      A Kernel-Checked Spectral-to-Tiling Theorem\\[-1mm]
+      A Kernel-Checked Proof of Fuglede's Conjecture\\[-1mm]
       for the Cyclic Group $\Z/180\Z$\par}
     \vspace{0.8em}
     {\large Javier Emilio Bazán Sanchez\par}
@@ -109,25 +109,25 @@
   \begin{minipage}{0.94\textwidth}
   \small
   \textbf{Abstract.}
-  This article presents a machine-checked proof of the spectral-to-tiling
-  implication for
-  the cyclic group $\Z/180\Z$.  Spectrality is expressed exactly: the mask
-  polynomial of a finite set is required to have the cyclotomic divisors
-  corresponding to all nonzero differences in a proposed spectrum.  The
-  conclusion is a genuine translational tiling, encoded as bijectivity of the
-  addition map.  The final obstruction occurs at cardinality $30$.  Its
-  marginal component is reduced from $16{,}796$ literal pairs to $213$
-  profile cells through an ordered-difference histogram identity; $16{,}574$
-  pairs are refuted by an integer scalar coefficient and the remaining $222$
-  are connected to explicit catalogue witnesses.  A separate common-frame
-  argument handles the coupled five-row Gram data.  These certificates are
-  joined
-  to the global cardinality reduction in Lean~4.  The final theorem and its
-  principal intermediate endpoints replay successfully with
-  \texttt{leanchecker}; their printed dependencies are only
-  \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
-  The full source, deterministic generators, manifests, and a 946-module
-  replay plan accompany the article.
+  This article gives a machine-checked proof of both directions of Fuglede's conjecture
+  for the cyclic group $\Z/180\Z$: a finite subset is spectral if and only if
+  it tiles by translation.  Spectrality is encoded exactly by cyclotomic
+  divisibility of the integer mask polynomial, and tiling is bijectivity of
+  the addition map.  The spectral-to-tiling direction ends in a cardinality
+  $30$ classification.  Its marginal audit compresses $16{,}796$ literal
+  pairs to $213$ profile cells, refutes $16{,}574$ pairs by exact integer
+  coefficients, and links the remaining $222$ to explicit catalogue
+  witnesses; a common-frame certificate checks the coupled Gram data.  For
+  the converse, an exact Fourier zero-cover theorem reduces all tilings to
+  their eighteen possible cardinalities.  Structural closures, quotient
+  descent, and a six-point theorem in $\Z/36\Z$ discharge those cases; the
+  last thirty-point case is obtained by dilating its six-point complement,
+  descending to $\Z/36\Z$, and lifting a six-frequency set through five
+  fibres.  Lean~4 and \texttt{leanchecker} replay the final biconditional with
+  only \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
+  The complete Lean dependency closure accompanies the article, together with
+  the supplemental certificates, deterministic generators, and manifests used
+  for the largest spectral-to-tiling branch.
   \end{minipage}
   \vspace{1.1em}
   \hrule
@@ -151,43 +151,52 @@ polynomials and roots of unity~\cite{LamLeung2000,Malikiosis2022}.
 Among the established cyclic families are groups of order $p^nq$, $pqr$,
 $p^2qr$, and $pqrs$~\cite{MalikiosisKolountzakis2017,Shi2019,Somlai2023,
 KissMalikiosisSomlaiVizer2022}; group-ring methods also treat
-$p^nqr$~\cite{Zhang2022}.  These results provide the closest arithmetic
-context for the present theorem.  The modulus $180=2^2\cdot3^2\cdot5$ lies
-outside those one-repeated-prime and square-free families because two
-distinct prime factors occur with exponent two.
+$p^nqr$~\cite{Zhang2022}.  A closer recent result proves the
+spectral-to-tiling direction for $\Z_{p^2q^2r}$ under the size condition
+$p^2q^2<r$~\cite{FallonKissMayeliSomlai2026}.  At order $180$, however,
+this condition reads $36<5$ and therefore does not apply.  The reverse
+direction is related to broader results on three-prime integer tilings and
+the Coven--Meyerowitz conditions~\cite{LabaLondnerEven2024}.  The present
+work gives a self-contained kernel-checked proof specialized to order $180$;
+it makes no claim about arbitrary moduli.
 
-This article reports a complete formal proof of the spectral-to-tiling
-direction for $G=\Zmod{180}$.  The modulus
+This article reports a complete formal proof of both directions for
+$G=\Zmod{180}$, where
 \[
-180=2^2\cdot 3^2\cdot 5
+180=2^2\cdot 3^2\cdot 5.
 \]
-is small enough to permit an explicit classification, but composite enough
-to exhibit several interacting prime-power directions.  Most cardinalities
-are removed by structural reductions.  The difficult residual case has
-$|A|=30$ and requires both a marginal classification and compatibility of a
-five-row Gram configuration.
+The spectral-to-tiling direction is driven by structural reductions and a
+finite classification.  Its difficult residual case has $|A|=30$ and
+requires both a marginal classification and compatibility of a five-row Gram
+configuration.  The converse starts from the exact Fourier characterization
+of a tiling pair, resolves all possible divisor cardinalities, and closes its
+last thirty-point case by descent to $\Zmod{36}$.
 
-The central design choice is to make the finite computation part of the
-proof, rather than an oracle beside it.  Scripts generate ordinary Lean
-declarations; the Lean kernel checks the generated proofs.  Hash manifests
+Every finite computation reaches the kernel as an ordinary Lean declaration,
+rather than remaining an oracle beside the proof.  For the largest generated
+V97 sub-DAG, deterministic scripts emit those declarations and hash manifests
 fail closed if sources, catalogues, witness locations, or import order change.
-No floating-point calculation enters the theorem.
+The rest of the theorem is likewise committed as checkable Lean source.  No
+floating-point calculation enters the theorem.
 
 \subsection*{Contribution}
 
-The formal development establishes the following implication.
+The formal development establishes the finite cyclic Fuglede conjecture at
+order $180$.
 
-\begin{theorem}[Formal spectral-to-tiling theorem]\label{thm:main}
-Let $A,L\subseteq\Zmod{180}$.  If $L$ is an exact cyclotomic spectrum for
-$A$, then there exists $B\subseteq\Zmod{180}$ such that the map
-\[
-A\times B\longrightarrow\Zmod{180},\qquad (a,b)\longmapsto a+b
-\]
-is bijective.
+\begin{theorem}[Kernel-checked Fuglede theorem at order $180$]\label{thm:main}
+For every $A\subseteq\Zmod{180}$, the following conditions are equivalent:
+\begin{enumerate}[label=\textup{(\roman*)}]
+  \item $A$ tiles $\Zmod{180}$ by translation;
+  \item $A$ admits an orthogonal basis of characters.
+\end{enumerate}
+Equivalently, there is a finite set $B$ for which the addition map
+$A\times B\to\Zmod{180}$ is bijective if and only if there is a finite set
+$L$ that is an exact cyclotomic spectrum for $A$.
 \end{theorem}
 
 In the repository, Theorem~\ref{thm:main} is the declaration
-\texttt{Fuglede.z180\_exists\_tiling\_of\_spectral\_v96}.
+\texttt{Fuglede.z180\_tiles\_iff\_spectral}.
 
 \section{The exact finite formulation}
 
@@ -252,23 +261,26 @@ Lean defines
 Thus the conclusion includes both existence and uniqueness of each
 representation.  In particular, it implies $|A||B|=|G|$.
 
-The public Lean endpoint is short enough to display in full.
+In ASCII notation, the public endpoint has the following type; the two imported
+endpoints supply its proof.
 
 \begin{lstlisting}
-theorem z180_exists_tiling_of_spectral_v96
-    {A L : Finset (ZMod 180)}
-    (hSpec : CyclotomicSpectrum 180 A L) :
-    exists B : Finset (ZMod 180), Tiles A B := by
-  exact z180_exists_tiling_of_spectral_of_k30_catalogue_v81
-    z180_k30_exceptional_catalogue_completeness_v96 hSpec
+theorem z180_tiles_iff_spectral
+    (A : Finset (ZMod 180)) :
+    Iff
+      (Exists fun B : Finset (ZMod 180) => Tiles A B)
+      (Exists fun L : Finset (ZMod 180) =>
+        CyclotomicSpectrum 180 A L)
 \end{lstlisting}
 
-The work therefore lies in constructing the exceptional catalogue
-completeness object consumed on the last line.
+The two imported endpoints contain the substantive work.  The
+spectral-to-tiling classification is described first, followed by the
+tiling-to-spectral reduction.
 
-\section{Proof architecture}
+\section{The spectral-to-tiling direction}
 
-Figure~\ref{fig:architecture} shows the dependency structure.  The global
+Figure~\ref{fig:architecture} shows the dependency structure of the
+computationally harder implication.  The global
 reduction isolates the cardinality-$30$ obstruction.  That obstruction has a
 projective/marginal component (V97) and a coupled common-frame component
 (V95).  V81 turns their catalogue into the global theorem, and V96 supplies
@@ -305,6 +317,11 @@ independent finite certificates joined only at catalogue assembly.}
 \label{fig:architecture}
 \end{figure*}
 
+The version labels in Figure~\ref{fig:architecture} are immutable module
+suffixes: V97 is the projective-profile audit, V95 the common-frame
+certificate, V83 their catalogue interface, V81 the global reduction, and V96
+the unconditional spectral-to-tiling endpoint.
+
 \subsection{The global reduction}
 
 The surrounding library converts the spectrum hypothesis into exact
@@ -329,6 +346,21 @@ Fourier and tiling lemmas do not depend on the large finite catalogue, while
 the catalogue proof sees a small and rigid normalized state space.
 
 \subsection{Projective normalization and ordered differences}
+
+The exceptional reduction starts from balanced cardinality-$30$ data and
+passes to five six-point row fibres and one six-point column fibre in
+$\Zmod{36}$.  Fixing a column fibre gives five $6\times6$ Fourier blocks.
+Let $V$ denote its six residues and $U_0,\ldots,U_4$ the five row patterns; a
+marginal check below uses one such row and abbreviates it by $U$.
+The projective-cover alternative orients the pair so that $V$ is the side
+whose differences have a nontrivial common divisor
+\[
+  d=\gcd\bigl(36,\{v-v':v,v'\in V\}\bigr).
+\]
+Validity of the six-point sets bounds $d$ by $6$, while the two-class
+condition on $U$ eliminates $d=1,2$.  Lean therefore proves
+$d\in\{3,4,6\}$.  Thus $U$, $V$, and $d$ below are normalized fibre data
+forced by the exceptional branch, not new assumptions.
 
 The projective branch works with six-element subsets of $\Zmod{36}$.  For a
 list $S$, define its ordered-difference list
@@ -390,12 +422,19 @@ Total & 19 & 43 & 213 & 222 \\
 \end{tabular}
 \end{table}
 
-Each cell evaluates an integer target coefficient.  A value different from
-$936$ refutes every pair in that cell.  This eliminates $16{,}574$ pairs.  A
-positive value is not accepted merely because the total count is plausible:
+The exceptional spectral argument determines the six eigenvalues of each Gram
+block: one is $30$, one is $6$, and four are zero.  Consequently its exact
+trace-square target is
+\[
+  \operatorname{tr}(G^2)=30^2+6^2=936.
+\]
+Each profile cell evaluates the corresponding integer coefficient.  A value
+different from $936$ refutes every pair in that cell.  This eliminates
+$16{,}574$ pairs.  A cell attaining $936$ is not accepted merely because the
+total count is plausible:
 each of the remaining $222$ literal pairs carries an exact pointer into one of
 the certified V87 witness shards.  Lean checks the shard index, witness index,
-divisor, normalization, and the literal $U,V$ values.  The positive counts
+divisor, normalization, and the literal $U,V$ values.  The surviving counts
 $42+180$ therefore express a set equality, not a probabilistic or numerical
 match.
 
@@ -411,19 +450,32 @@ The marginal catalogue is insufficient by itself: five row configurations
 must be compatible with the same column frame.  The V95 branch handles this
 coupled condition.
 
+For a fixed normalized column orbit $o$, let $c_{e,k}(W,V_o)$ denote the exact
+integer coefficient at Gram entry $e$ and cyclotomic coordinate $k$.  The row
+signature is a short list
+\[
+  \sigma_o(W)=\bigl(c_{e_j,k_j}(W,V_o)\bigr)_{j=1}^{t},
+  \qquad t\in\{0,1,2\},
+\]
+where the selected entries depend only on $o$.  The coupled star condition
+retains the five signatures
+$\bigl(\sigma_o(U_0),\ldots,\sigma_o(U_4)\bigr)$ in one affine frame and
+requires their selected coordinates to sum to zero.  It also records that each
+pair $(U_i,V_o)$ has trace-square $936$ and that the five Gram matrices sum to
+the diagonal target with value $30$.
+
 First, an orbit-frame extractor writes the normalized column as one affine
 image with a unit and a translation.  The same unit is then applied to every
-row.  Covariance lemmas transport the five Gram coordinates into this common
-frame.  Second, a trace classifier identifies the only compatible row orbit.
+row.  Covariance lemmas transport the selected coordinates of all five rows
+into this common frame.  Second, a trace classifier identifies the only
+compatible row orbit.
 Finally, a bounded affine table supplies a valid candidate with the same exact
 star signature.  Permutation invariance transports the candidate from the
 representative to the original row.
 
-The result is a function of type
-\texttt{Z180K30ExceptionalFramedStarCatalogueV83}; it contains both the five
-candidates and the proof that their exact coordinates realize the required
-star.  The finite affine leaves, their aggregate, and the final V95 module are
-all replayed separately.
+The V83 catalogue interface returns both the five candidates and proofs that
+their exact coordinates realize the required star.  The finite affine leaves,
+their aggregate, and the final common-frame module are all replayed separately.
 
 \subsection{Catalogue assembly}
 
@@ -432,6 +484,68 @@ gives the coupled witness.  V83 combines them into complete exceptional
 catalogue data; V81 converts that data into the global cardinality-$30$
 closure and then invokes the previously completed cardinality reduction.  V96
 is the final three-import wrapper joining these components.
+
+\section{The tiling-to-spectral direction}
+
+The converse uses the same exact Fourier language but a different proof
+architecture.  For a tiling pair $(A,B)$ in a finite cyclic group, convolution
+and character orthogonality give
+\begin{equation}\label{eq:zero-cover}
+\begin{aligned}
+ \operatorname{Tiles}(A,B)\Longleftrightarrow{}&
+ |A||B|=N\ \text{ and}\\
+ &\forall d\ne0,\quad \bigl(\widehat{\mathbf 1_A}(d)=0\\
+ &\hspace{6.3em}\text{or }\widehat{\mathbf 1_B}(d)=0\bigr).
+\end{aligned}
+\end{equation}
+Lean proves both implications, including Fourier inversion from the right-hand
+side back to uniqueness of representations.  Equation~\eqref{eq:fourier-bridge}
+then converts this zero cover to cyclotomic divisibility.
+
+The cardinality identity in Equation~\eqref{eq:zero-cover} leaves exactly the
+eighteen positive divisors of $180$.  The reduction closes them in stages,
+with the final two cases isolated as $|A|=6$ and $|A|=30$.
+Table~\ref{tab:converse-cases} summarizes the mechanisms used for all cases.
+
+\begin{table}[t]
+\centering
+\caption{Cardinality closures for tiling-to-spectrality.}
+\label{tab:converse-cases}
+\small
+\begin{tabular}{@{}p{0.30\columnwidth}p{0.62\columnwidth}@{}}
+\toprule
+Cardinalities & Main mechanism \\
+\midrule
+$1,2,3,180$ & Endpoint and direct character arguments \\
+$4,5,9$ & Prime-power allocation \\
+$60,90$ & Small-complement Fourier construction \\
+$20,36,45$ & Exact cyclotomic forcing \\
+$10,12,15,18$ & Quotient descent and lifted spectra \\
+$6,30$ & Six-point forcing in $\Zmod{36}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The six-point theorem in $\Zmod{36}$ is the reusable core.  For a $6\times6$
+tiling, the zero cover allocates exactly one of the orders $2,4$ and one of the
+orders $3,9$ to each factor.  Previously checked forcing lemmas turn the
+remaining orders into one of five explicit difference patterns, each of which
+supplies a six-frequency spectrum.  A six-point tile in $\Zmod{180}$ descends
+injectively modulo $36$ and its spectrum lifts by multiplying frequencies by
+five.
+
+For the last case, suppose $|A|=30$.  Its tiling complement has six elements.
+Multiplication by five preserves that complement as a tiling factor, while
+reduction modulo $36$ sends it injectively to a six-point set $C$.  An explicit
+six-frequency set $Q\subseteq\Zmod{36}$ is chosen so that the Fourier transform
+of $C$ is nonzero on every nonzero difference from $Q$.  The full preimage
+$L$ of $Q$ in $\Zmod{180}$ has $5\cdot6=30$ elements.  The zero-cover property
+forces the Fourier transform of $A$ to vanish on every nonzero difference in
+$L$, so $L$ is a spectrum for $A$.
+
+These constructions form the V12 tiling-to-spectral endpoint.  Combining it
+with the V96 spectral-to-tiling endpoint yields the public theorem
+\texttt{z180\_tiles\_iff\_spectral} without any additional finite search.
 
 \section{Formal verification and trust}
 
@@ -452,10 +566,11 @@ base.  Every generated declaration is elaborated by Lean.  Structural roots
 are replayed again by \texttt{leanchecker}.
 
 \paragraph{No proof escape hatches.}
-The authenticated V97 DAG contains no \texttt{sorry}, project-defined
-\texttt{axiom}, \texttt{native\_decide}, or \texttt{unsafe}.  Ordinary
-decisions are deliberately kept small; larger statements are split into
-bounded leaves and composed with proved list and permutation lemmas.
+The complete 2,411-module dependency closure of the final biconditional
+contains no \texttt{sorry}, \texttt{admit}, project-defined \texttt{axiom},
+\texttt{native\_decide}, or \texttt{unsafe}.  In the large V97 sub-DAG,
+ordinary decisions are deliberately kept small; larger statements are split
+into bounded leaves and composed with proved list and permutation lemmas.
 
 \paragraph{Fail-closed provenance.}
 The master manifest authenticates 946 modules in a unique topological order,
@@ -474,39 +589,51 @@ problem-specific axiom appears.
 
 \section{Reproducing the artifact}
 
-The repository contains the complete Lean project, pinned toolchain, article,
-certificate inputs, deterministic generators, and manifests.  The shortest
-end-to-end commands are:
+The repository contains the exact transitive Lean source closure of the final
+theorem, the pinned toolchain, the article, and supplementary provenance for
+the large V97 certificate.  The public artifact is available at
+\url{https://github.com/asim-v/fuglede-z180-formal}.  The shortest kernel
+replay is:
 
+\noindent\begin{minipage}{\dimexpr\columnwidth-2\fboxsep-2\fboxrule\relax}
 \begin{lstlisting}[language={},basicstyle=\ttfamily\scriptsize]
 cd fuglede_lean
 lake update
-lake build Fuglede.Z180K30UnconditionalCatalogueClosureV96
-lake env leanchecker -v Fuglede.Z180K30UnconditionalCatalogueClosureV96
+lake exe cache get
+lake build '+Fuglede.Z180FugledeTheorem:olean'
+lake env leanchecker -v Fuglede.Z180FugledeTheorem
 cd ..
+\end{lstlisting}
+\end{minipage}
+
+Every proof-relevant finite certificate is an ordinary Lean source file in
+that import closure; no external solver or Python program is trusted by the
+final theorem.  As an additional provenance check for the largest generated
+sub-DAG, run:
+
+\begin{lstlisting}[language={},basicstyle=\ttfamily\scriptsize]
 python scripts/generate_z180_k30_projective_profile_audit_v97.py
 \end{lstlisting}
 
-The last command authenticates the V97 source DAG and manifest.  A serialized
-PowerShell runner is supplied for a module-by-module replay under a fixed
-memory cap.  The public repository records source and checked-object hashes for
-the V97, V81, and V96 endpoints.
+This command authenticates the V97 sources and manifest.  The serialized
+PowerShell runner provides a module-by-module replay under a fixed memory cap.
 
 \section{Scope and interpretation}
 
 Theorem~\ref{thm:main} is intentionally precise.
 
 \begin{itemize}
-  \item It proves the spectral-to-tiling direction for $\Zmod{180}$.
-  \item Spectrality is the exact cyclotomic predicate displayed in
-    Section~2, and Equation~\eqref{eq:fourier-bridge} identifies it with the
-    usual finite Fourier definition; no approximate vanishing is assumed.
-  \item The conclusion is a translational tiling with unique
-    representations.
-  \item The theorem does not assert the converse, a result for arbitrary
-    moduli, or a general theorem for all finite abelian groups.
-  \item The article explains the reduction and certificate architecture; the
-    thousands of finite leaves are best inspected and replayed as code.
+  \item It proves both spectral-to-tiling and tiling-to-spectral for
+    $\Zmod{180}$.
+  \item Equation~\eqref{eq:fourier-bridge} identifies the exact cyclotomic
+    predicate with the usual finite Fourier definition; no approximate
+    vanishing is assumed.
+  \item Tiling means unique representation under addition, not merely a
+    cardinality or covering condition.
+  \item The theorem concerns one finite cyclic group.  It is not a theorem for
+    arbitrary moduli, arbitrary finite abelian groups, or Euclidean spaces.
+  \item The large finite leaves are proof terms checked by Lean and are best
+    inspected and replayed as code.
 \end{itemize}
 
 This distinction is more than cautious wording.  Formal verification certifies
@@ -516,19 +643,21 @@ the exact Lean predicates and the public endpoint are included explicitly.
 
 \section{Conclusion}
 
-The spectral-to-tiling implication on $\Zmod{180}$ can be proved with a small
-conceptual core and a large but structured finite certificate.  The difficult
-cardinality-$30$ branch becomes manageable after separating marginal profile
-data from coupled common-frame data.  Ordered-difference profiles compress the
-marginal audit to 213 exact cells, while explicit witness pointers prevent the
-positive cases from being accepted by count alone.  The common-frame branch
-then supplies the compatibility missing from a marginal classification.
+Fuglede's conjecture holds for the finite cyclic group $\Zmod{180}$.  The two
+directions require complementary ideas.  Spectral-to-tiling uses a structured
+finite certificate whose difficult cardinality-$30$ branch separates marginal
+profile data from coupled common-frame data.  Ordered-difference profiles
+compress its marginal audit to 213 exact cells, and explicit witness pointers
+prevent positive cases from being accepted by count alone.  Tiling-to-spectral
+uses an exact Fourier zero cover, cardinality reduction, and quotient descent;
+its final case lifts a six-frequency construction from $\Zmod{36}$.
 
-The resulting V96 declaration is short, but its inputs are fully exposed:
-exact definitions, algebraic identities, finite tables, generators, hashes,
-and replay commands are all part of the release.  This makes the result both a
-theorem about a concrete cyclic group and a reproducible case study in turning
-large finite harmonic-analysis arguments into kernel-checked mathematics.
+The final declaration merely joins these independently checked endpoints, but
+its complete transitive source closure is public: definitions, algebraic
+identities, finite tables, generated proof terms, hashes, and replay commands
+are all exposed.  The result is therefore both a theorem about a concrete
+cyclic group and a reproducible case study in turning large finite
+harmonic-analysis arguments into kernel-checked mathematics.
 
 \section*{Acknowledgements}
 

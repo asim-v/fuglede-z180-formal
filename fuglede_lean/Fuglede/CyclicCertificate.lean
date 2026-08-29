@@ -39,8 +39,8 @@ def CyclotomicSpectrum (N : ℕ) (A L : Finset (ZMod N)) : Prop :=
   A.Nonempty ∧ A.card = L.card ∧
     ∀ l₁ ∈ L, ∀ l₂ ∈ L, l₁ ≠ l₂ → CyclotomicZero N A (l₁ - l₂)
 
-/-- The unresolved direction of Fuglede for a specified cyclic modulus,
-expressed entirely as a finite exact statement. -/
+/-- The spectral-to-tiling direction at a specified cyclic modulus, expressed
+entirely as a finite exact statement. -/
 def SpectralImpliesTileAt (N : ℕ) : Prop :=
   ∀ A L : Finset (ZMod N), CyclotomicSpectrum N A L → ∃ B, Tiles A B
 
@@ -52,8 +52,5 @@ def TileImpliesSpectralAt (N : ℕ) : Prop :=
 /-- Both directions of finite Fuglede at a fixed cyclic modulus. -/
 def FugledeAt (N : ℕ) : Prop :=
   SpectralImpliesTileAt N ∧ TileImpliesSpectralAt N
-
-/-- Our concrete target: the first square-free cyclic order with five primes. -/
-abbrev Fuglede2310 : Prop := SpectralImpliesTileAt 2310
 
 end Fuglede

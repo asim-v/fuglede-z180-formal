@@ -1,0 +1,65 @@
+name: Verify Z180 release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-integrity:
+    name: Source closure and hashes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Authenticate exact Z180 release
+        run: python scripts/audit_z180_release.py
+
+      - name: Authenticate supplemental V97 provenance
+        run: python scripts/generate_z180_k30_projective_profile_audit_v97.py
+
+  kernel-replay:
+    name: Lean kernel replay
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      LAKE_JOBS: "1"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install pinned Lean toolchain
+        uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          lake-package-directory: fuglede_lean
+
+      - name: Fetch pinned dependencies and cache
+        working-directory: fuglede_lean
+        run: |
+          lake update
+          lake exe cache get
+
+      - name: Build the public biconditional
+        working-directory: fuglede_lean
+        run: lake build '+Fuglede.Z180FugledeTheorem:olean'
+
+      - name: Replay the final declarations
+        working-directory: fuglede_lean
+        run: lake env leanchecker -v Fuglede.Z180FugledeTheorem
+

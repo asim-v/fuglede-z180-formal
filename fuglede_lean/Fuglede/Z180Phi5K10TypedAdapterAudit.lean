@@ -1,6 +1,0 @@
-import Fuglede.Z180Phi5K10TypedAdapter
-
-#print axioms Fuglede.z180ExactOrderTransform_pos_three
-#print axioms Fuglede.z180ExactOrderTransform_pos_nine
-#print axioms Fuglede.z180_phi5_k10_both_transform_zero
-#print axioms Fuglede.z180_phi5_k10_both_cyclotomic_zero

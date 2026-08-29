@@ -17,6 +17,7 @@ paper/rendered*/
 paper/main.xdv
 paper/main.run.xml
 paper/main.bcf
+tmp/
 __pycache__/
 *.pyc
 .DS_Store

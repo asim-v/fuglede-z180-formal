@@ -1,68 +1,10 @@
-import Fuglede.FiniteTiling
-import Fuglede.CRT2310
-import Fuglede.InnerDistribution
-import Fuglede.FourierEnergy
-import Fuglede.FourierCrossImplications
-import Fuglede.MultiaxisRelaxation
-import Fuglede.MultiAxisBounds
-import Fuglede.MultiaxisRealization
-import Fuglede.MultiaxisCertificateBridge
-import Fuglede.K1CollisionCertificate
-import Fuglede.CampaignBatch00.K2CollisionNormalizedCertificate
-import Fuglede.CampaignBatch00.K4BaseNormalizedCertificate
-import Fuglede.K77BranchSide0Mask01Certificate
-import Fuglede.K220Certificate
-import Fuglede.K242Certificate
-import Fuglede.ProjectionTiling
-import Fuglede.ProjectionBounds
-import Fuglede.ProjectionCollision
-import Fuglede.CyclicCertificate
-import Fuglede.FrequencyOrder
-import Fuglede.SupportOrder
-import Fuglede.PrimeCyclotomic
-import Fuglede.LabaMarshall
-import Fuglede.LabaMarshallCyclotomic
-import Fuglede.SpectralDuality
-import Fuglede.SpectralFourier
-import Fuglede.PrimeSupport
-import Fuglede.CardinalityEndpoints
-import Fuglede.Levels
-import Fuglede.FiberObstruction
-import Fuglede.SizeElevenCore
-import Fuglede.SizeTwelveCore
-import Fuglede.SizeTwentyOneCore
-import Fuglede.SizeTwentyTwoCore
-import Fuglede.HighCardinalitySieve
-import Fuglede.HighRangeBridge
-import Fuglede.Fuglede2310FromCertificates
-import Fuglede.Z180K6M6Graph
-import Fuglede.FourierTiling
-import Fuglede.Z180K12Graph
-import Fuglede.Z180Projection
-import Fuglede.Z180K9Closure
-import Fuglede.Z180CardinalityEndpoints
-import Fuglede.Z180DivisorCases
-import Fuglede.Z180ProjectionTiles
-import Fuglede.Z180SmallCardinality
-import Fuglede.Z180K6Closure
-import Fuglede.Z180TrivialCardinalities
-import Fuglede.Z180K5Closure
-import Fuglede.Z180K4Closure
-import Fuglede.Z180K15Closure
-import Fuglede.Z180PrimePowerFibers
-import Fuglede.Z180ClosedCases
-import Fuglede.Z180DivisorReduction
-import Fuglede.Z180TilingSpectralReduction
-import Fuglede.Z180CardinalitySieve
-import Fuglede.Z180NondivisorK7Closure
-import Fuglede.Z180NondivisorK13Closure
-import Fuglede.Z180NondivisorK17Closure
-import Fuglede.Z180NondivisorK19Closure
-import Fuglede.Z180NondivisorK21Closure
-import Fuglede.Z180NondivisorK27Closure
-import Fuglede.Z180MasterReduction
-import Fuglede.Z180FiveLevelFourier
-import Fuglede.Z180FiveLevelCardinality
-import Fuglede.Z180K6SetNormalForm
-import Fuglede.Z180K6NonzeroFifthZero
-import Fuglede.Z180K10Structural
+import Fuglede.Z180FugledeTheorem
+
+/-!
+# Public root for the Z/180Z release
+
+The repository is intentionally scoped to the kernel-checked biconditional in
+`Fuglede.Z180FugledeTheorem`.  Keeping this root minimal makes `lake build`
+replay exactly the advertised result and prevents unrelated experimental
+modules from entering the default target.
+-/

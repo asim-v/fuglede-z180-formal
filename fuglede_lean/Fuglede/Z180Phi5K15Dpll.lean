@@ -1,4 +1,4 @@
--- Source: C:/Users/personal/Documents/Codex/2026-08-03/abre-https-vibemathed-com-y-encuentra/fuglede_search/z180_phi5_dpllt_evidence_20260808_v1/k15_side0.smt2
+-- Original provenance label: fuglede_search/z180_phi5_dpllt_evidence_20260808_v1/k15_side0.smt2 (not required for kernel replay).
 -- Declarations: 36; assertions: 111
 import Mathlib.Tactic
 

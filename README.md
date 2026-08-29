@@ -1,128 +1,183 @@
-# A kernel-checked spectral-to-tiling theorem for `Z/180Z`
+# Fuglede's conjecture for `Z/180Z`, checked in Lean 4
 
-This repository contains a Lean 4 formalization of the spectral-to-tiling
-direction of Fuglede's conjecture for the cyclic group `ZMod 180`, together
-with a two-column article explaining the mathematics and the verification
-architecture.
+This repository contains a kernel-checked proof of the finite cyclic Fuglede
+conjecture at order `180`:
+
+> A finite subset of `ZMod 180` tiles by translation if and only if it is
+> spectral.
+
+The release is deliberately limited to this theorem. It does not include the
+separate `Z/2310Z` campaign or unfinished generalizations.
 
 - **Author:** Javier Emilio Bazán Sanchez
 - **Affiliation:** Facultad de Ciencias, Universidad Nacional Autónoma de México (UNAM)
 - **Contact:** [bazan@ciencias.unam.mx](mailto:bazan@ciencias.unam.mx)
+- **Lean:** `v4.31.0`
+- **mathlib:** `fabf563a7c95a166b8d7b6efca11c8b4dc9d911f`
 
 ## Main theorem
 
 The public endpoint is
-[`Fuglede.z180_exists_tiling_of_spectral_v96`](fuglede_lean/Fuglede/Z180K30UnconditionalCatalogueClosureV96.lean):
+[`Fuglede.z180_tiles_iff_spectral`](fuglede_lean/Fuglede/Z180FugledeTheorem.lean):
 
 ```lean
-theorem z180_exists_tiling_of_spectral_v96
-    {A L : Finset (ZMod 180)}
-    (hSpec : CyclotomicSpectrum 180 A L) :
-    ∃ B : Finset (ZMod 180), Tiles A B
+theorem z180_tiles_iff_spectral (A : Finset (ZMod 180)) :
+    (∃ B : Finset (ZMod 180), Tiles A B) ↔
+      ∃ L : Finset (ZMod 180), CyclotomicSpectrum 180 A L
 ```
 
-Here `CyclotomicSpectrum` is an exact algebraic encoding of pairwise Fourier
-orthogonality by divisibility of the mask polynomial by the appropriate
-cyclotomic polynomial. The development proves
-[`cyclotomicSpectrum_iff_fourierSpectrum`](fuglede_lean/Fuglede/SpectralFourier.lean),
-so this is equivalent to the usual finite Fourier definition rather than a
-weaker proxy. `Tiles A B` means that the addition map
-`A × B → ZMod 180` is bijective, so every group element has a unique
-representation `a + b`.
+`Tiles A B` means that the addition map
+`A × B → ZMod 180`, `(a,b) ↦ a+b`, is bijective. Thus every group element has
+one and only one representation.
 
-The checked proof has three final components:
+`CyclotomicSpectrum 180 A L` is an exact algebraic encoding of a Fourier
+spectrum. The development proves that it is equivalent to the usual condition
+that the characters indexed by `L` form an orthogonal basis on `A`; it is not
+an approximation or a weaker proxy.
 
-1. **V97 projective-profile audit.** A histogram/profile compression reduces
-   16,796 literal pairs to 213 profile cells. The 222 positive pairs are tied
-   to exact catalogue locations; all other pairs are refuted by an integer
-   scalar coefficient.
-2. **V95 common-frame catalogue.** A finite affine/covariance argument
-   extracts compatible candidates for the coupled five-Gram configuration.
-3. **V81/V96 closure.** The two finite certificates discharge the remaining
-   `|A| = 30` catalogue hypothesis and connect it to the global cardinality
-   reduction for `ZMod 180`.
+## Proof structure
 
-The global reduction itself includes the upper-half argument, an exact
-cardinality sieve, the divisor cases, the nondivisor exclusions, and the
-separate closures at sizes `6`, `10`, `12`, `18`, `24`, and `33`. The K30
-catalogue is the final branch, not the whole proof in isolation.
+The two implications are checked independently.
 
-## Repository map
+### Spectral implies tiling
 
-| Path | Purpose |
-| --- | --- |
-| [`paper/main.tex`](paper/main.tex) | Publication-ready two-column article |
-| [`paper/main.pdf`](paper/main.pdf) | Rendered article |
-| [`fuglede_lean/`](fuglede_lean/) | Complete pinned Lean project |
-| [`fuglede_lean/Fuglede/`](fuglede_lean/Fuglede/) | Lean source tree |
-| [`scripts/`](scripts/) | Generators, fail-closed manifests, and replay drivers |
-| [`generated/`](generated/) | Child manifests used by the compressed K30 audit |
-| [`certificates/`](certificates/) | Small external certificate inputs |
-| [`docs/PROOF_MAP.md`](docs/PROOF_MAP.md) | Human-readable map from theorem to implementation |
-| [`verification/README.md`](verification/README.md) | Exact verification commands and trust boundary |
+A cardinality and divisor reduction closes all branches except `|A| = 30`.
+The final branch combines:
 
-## Reproduce
+1. a projective-profile audit that compresses 16,796 literal pairs to 213
+   exact profile cells, refutes 16,574 pairs, and links the remaining 222 to
+   explicit catalogue witnesses;
+2. a common-frame certificate for the coupled five-row Gram data;
+3. the V81/V96 assembly that feeds this certificate into the global reduction.
 
-The repository pins Lean `v4.31.0` and mathlib commit
-`fabf563a7c95a166b8d7b6efca11c8b4dc9d911f`.
+The component endpoint is
+[`z180_exists_tiling_of_spectral_v96`](fuglede_lean/Fuglede/Z180K30UnconditionalCatalogueClosureV96.lean).
+
+### Tiling implies spectral
+
+A general Fourier theorem characterizes a tiling pair by the cardinality
+identity and an exact zero cover at every nonzero frequency. Since the size of
+a tile divides `180`, the proof closes the eighteen possible cardinalities by
+endpoint arguments, prime-power allocation, cyclotomic forcing, and quotient
+descent.
+
+The final `|A| = 30` case has a six-point complement. It is dilated by five and
+projected to `ZMod 36`; a checked six-frequency construction in `ZMod 36` is
+then lifted through the five fibres of `ZMod 180 → ZMod 36` to produce a
+30-point spectrum.
+
+The component endpoint is
+[`z180_exists_spectrum_of_tile_v12`](fuglede_lean/Fuglede/Z180TilingSpectralClosureV12.lean).
+
+See [`docs/PROOF_MAP.md`](docs/PROOF_MAP.md) for a file-level map.
+
+## What counts as a certificate
+
+All proof-relevant finite certificates are ordinary `.lean` source files in
+the transitive import closure of `Z180FugledeTheorem`. They are elaborated by
+Lean and replayed by its kernel; no Python script, SMT solver, floating-point
+calculation, or precompiled object is trusted by the theorem.
+
+The release contains exactly the local source closure needed by the endpoint:
+
+- 2,411 Lean modules;
+- 25,405,989 bytes and 294,748 source lines at release preparation time;
+- zero missing local imports;
+- zero `sorry`, `admit`, project-defined axioms, `unsafe`, or `native_decide`
+  in the closure.
+
+Every proof input is authenticated in
+[`verification/Z180_RELEASE_SHA256.txt`](verification/Z180_RELEASE_SHA256.txt).
+The files under [`scripts/`](scripts/) and [`certificates/`](certificates/) are
+supplementary provenance for the largest generated V97 sub-DAG. They are not
+part of the logical trust base.
+
+## Reproduce the theorem
+
+Install Git and [elan](https://github.com/leanprover/elan). Python is optional:
+it audits release manifests but is not needed by the kernel build. Then run:
 
 ```bash
-cd fuglede_lean
+git clone https://github.com/asim-v/fuglede-z180-formal.git
+cd fuglede-z180-formal/fuglede_lean
 lake update
-lake build Fuglede.Z180K30UnconditionalCatalogueClosureV96
-lake env leanchecker -v Fuglede.Z180K30UnconditionalCatalogueClosureV96
+lake exe cache get
+lake build '+Fuglede.Z180FugledeTheorem:olean'
+lake env leanchecker -v Fuglede.Z180FugledeTheorem
 cd ..
 ```
 
-Authenticate the compressed V97 source DAG and its 946-module replay plan:
+The final `#print axioms` report should contain only:
+
+- `propext`;
+- `Classical.choice`;
+- `Quot.sound`.
+
+These are standard classical and quotient principles used by mathlib. No
+problem-specific axiom is introduced.
+
+To reconstruct the import closure, scan it for proof escape hatches, and
+authenticate all 2,415 release inputs:
+
+```bash
+python scripts/audit_z180_release.py
+```
+
+To authenticate the supplemental deterministic V97 source manifest
+separately:
 
 ```bash
 python scripts/generate_z180_k30_projective_profile_audit_v97.py
 ```
 
-On Windows PowerShell, the serialized replay is:
+On Windows, a serialized low-memory replay is available as:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
   -File scripts/run_z180_k30_projective_profile_audit_v97.ps1
 ```
 
-See [`verification/README.md`](verification/README.md) for the endpoint hashes,
-checker policy, and the distinction between source authentication and kernel
-replay.
+Detailed commands and the trust boundary are recorded in
+[`verification/README.md`](verification/README.md).
 
-## Verification policy
+## Article
 
-The release sources contain no `sorry`, project-defined `axiom`,
-`native_decide`, or `unsafe` in the authenticated V97 proof DAG. Large finite
-checks are split into small ordinary-kernel certificates and composed by proved
-lemmas. The final `#print axioms` output lists only:
+The two-column manuscript is in [`paper/main.tex`](paper/main.tex), with its
+bibliography in [`paper/references.bib`](paper/references.bib). The rendered
+artifact is [`paper/main.pdf`](paper/main.pdf).
 
-- `propext`;
-- `Classical.choice`;
-- `Quot.sound`.
+Build it with a conventional TeX distribution:
 
-These are the standard classical/quotient axioms used throughout mathlib.
+```bash
+cd paper
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+bibtex main
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+```
 
-## Scope
+## Repository map
 
-The theorem proves the **spectral-to-tiling** implication for the exact
-cyclotomic spectrum predicate on `ZMod 180`. It does not yet claim the full
-converse, nor a theorem for arbitrary finite abelian groups or arbitrary
-moduli.
+| Path | Purpose |
+| --- | --- |
+| [`paper/`](paper/) | Article source, bibliography, and rendered PDF |
+| [`fuglede_lean/`](fuglede_lean/) | Pinned, self-contained Lean project |
+| [`fuglede_lean/Fuglede/`](fuglede_lean/Fuglede/) | Exact source closure of the final theorem |
+| [`docs/PROOF_MAP.md`](docs/PROOF_MAP.md) | Mathematical-to-formal proof map |
+| [`verification/`](verification/) | Reproduction commands and trust boundary |
+| [`scripts/`](scripts/) | Optional provenance and replay tools for V97 |
+| [`certificates/`](certificates/) | Small external inputs for those provenance tools |
 
-Work on the converse is tracked in
-[`Z180TilingSpectralReduction.lean`](fuglede_lean/Fuglede/Z180TilingSpectralReduction.lean).
-The current kernel-checked foundation proves, for every cyclic modulus, that a
-tiling pair is equivalent to the correct cardinality identity together with an
-exact Fourier (equivalently cyclotomic) zero cover. At modulus `180` it also
-proves that tile cardinalities are positive divisors of `180`, closes the
-singleton and full-group spectral endpoints, and lists explicitly the sixteen
-remaining cardinalities. These are reductions toward tiling-to-spectrality,
-not a claim that the converse has already been completed.
+## Scope and literature
+
+This is a theorem about the single finite cyclic group `ZMod 180`, not about
+all cyclic groups, arbitrary finite abelian groups, or Euclidean Fuglede.
+Order `180 = 2²·3²·5` lies in the three-prime, two-repeated-prime regime. The
+article explains how the result relates to existing cyclic-group families and
+does not claim that the converse direction was previously unknown.
 
 ## License and citation
 
-The Lean code and repository documentation are released under the MIT License.
-The article may be redistributed with attribution. Citation metadata are in
-[`CITATION.cff`](CITATION.cff).
+The Lean code, repository documentation, manuscript source, and rendered
+article are released under the MIT License.
+Citation metadata are in [`CITATION.cff`](CITATION.cff).

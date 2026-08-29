@@ -1,4 +1,0 @@
-import Fuglede.Z180SmallCardinality
-
-#print axioms Fuglede.z180_spectral_card_two_tiles
-#print axioms Fuglede.z180_spectral_card_three_tiles

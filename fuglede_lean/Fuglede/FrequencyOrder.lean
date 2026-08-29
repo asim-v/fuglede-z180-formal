@@ -60,9 +60,4 @@ theorem cyclotomicZero_sub_comm {N : ℕ} (hN : N ≠ 0)
   unfold CyclotomicZero
   rw [frequencyOrder_sub_comm hN x y]
 
-/-- Specialized kernel-checked bridge for the concrete open target. -/
-theorem frequencyOrder_2310_eq_addOrderOf (d : ZMod 2310) :
-    frequencyOrder 2310 d = addOrderOf d := by
-  exact frequencyOrder_eq_addOrderOf (by norm_num) d
-
 end Fuglede
