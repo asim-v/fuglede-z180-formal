@@ -2,7 +2,7 @@
 
 ## Scope and release status
 
-Release `v2.0.0`, dated 2026-08-28, formalizes both directions of
+Release `v2.0.1`, dated 2026-08-29, formalizes both directions of
 Fuglede's conjecture for the single finite cyclic group `ZMod 180`.
 
 The public theorem is
@@ -39,7 +39,7 @@ The machine-readable source of truth is
 | `verification/Z180_RELEASE_SHA256.txt` | `1A84333792D22292918C2814EE8657D68191F4C5C7E8FE50767205C1B3FDFF36` |
 | `fuglede_lean/lean-toolchain` | `1550DC85BB00026CC586C6390F0AF6D6B84C0AEF210F4B8B44EFDC6812EF6256` |
 | `fuglede_lean/lake-manifest.json` | `F1B27D13D436934209CF3ECF04835EF2436D60EADBEB4E493A8093EAB1F18D00` |
-| `paper/main.pdf` | `6C4FE1F0A65127C7FEBAFC5C3CC4189696C695C36E0603C687F2231E7C3EDD40` |
+| `paper/main.pdf` | `49BA9D9EDAC1511F4327C52F1D8E1173B82C2CC8434D8976F83993F2E02E2B59` |
 
 Toolchain:
 
@@ -68,7 +68,7 @@ For a clean public replay, clone directly to a short path and serialize Lake to
 limit peak memory:
 
 ```powershell
-git clone --branch v2.0.0 https://github.com/asim-v/fuglede-z180-formal.git C:\tmp\z180-v2
+git clone --branch v2.0.1 https://github.com/asim-v/fuglede-z180-formal.git C:\tmp\z180-v2
 Set-Location C:\tmp\z180-v2\fuglede_lean
 $env:LAKE_JOBS = "1"
 
@@ -157,7 +157,7 @@ kernel-reduced decisions. It does not rely on floating-point arithmetic.
 
 `paper/main.pdf` passed the release layout audit:
 
-- 5 pages and 561,709 bytes;
+- 5 pages and 558,449 bytes;
 - all fonts embedded;
 - zero overfull boxes;
 - zero undefined references or citations;

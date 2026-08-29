@@ -7,8 +7,8 @@ authors:
     given-names: "Javier Emilio"
     email: "bazan@ciencias.unam.mx"
     affiliation: "Facultad de Ciencias, Universidad Nacional Autónoma de México (UNAM)"
-version: 2.0.0
-date-released: 2026-08-28
+version: 2.0.1
+date-released: 2026-08-29
 repository-code: "https://github.com/asim-v/fuglede-z180-formal"
 license: MIT
 keywords:

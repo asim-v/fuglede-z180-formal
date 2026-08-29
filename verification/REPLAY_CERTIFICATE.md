@@ -2,8 +2,8 @@
 
 | Field | Value |
 | --- | --- |
-| Release | `v2.0.0` |
-| Date | 2026-08-28 |
+| Release | `v2.0.1` |
+| Date | 2026-08-29 |
 | Scope | Fuglede's conjecture for `ZMod 180` |
 | Public theorem | `Fuglede.z180_tiles_iff_spectral` |
 | Status | **PASS** |
@@ -27,8 +27,8 @@ biconditional
 | Lean | `v4.31.0` |
 | mathlib | `fabf563a7c95a166b8d7b6efca11c8b4dc9d911f` |
 | Release-manifest SHA-256 | `1A84333792D22292918C2814EE8657D68191F4C5C7E8FE50767205C1B3FDFF36` |
-| PDF size | 561,709 bytes |
-| PDF SHA-256 | `6C4FE1F0A65127C7FEBAFC5C3CC4189696C695C36E0603C687F2231E7C3EDD40` |
+| PDF size | 558,449 bytes |
+| PDF SHA-256 | `49BA9D9EDAC1511F4327C52F1D8E1173B82C2CC8434D8976F83993F2E02E2B59` |
 
 ## Endpoint replay
 
